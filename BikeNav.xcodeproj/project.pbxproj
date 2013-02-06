@@ -1,770 +1,370 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>70837F9650674AD3BC654E82</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BDCFA2D0626446C4B99054E0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict/>
-		</dict>
-		<key>B6E80EDFB5D544AE8CFAD246</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>BDCFA2D0626446C4B99054E0</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods.a</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>D25E67DC16BB5CEF00100FEA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D25E67F116BB5CEF00100FEA</string>
-				<string>D25E67EA16BB5CEF00100FEA</string>
-				<string>D25E67E816BB5CEF00100FEA</string>
-				<string>B6E80EDFB5D544AE8CFAD246</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E67DE16BB5CEF00100FEA</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0450</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Russell Wyatt</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>D25E67E116BB5CEF00100FEA</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>D25E67DC16BB5CEF00100FEA</string>
-			<key>productRefGroup</key>
-			<string>D25E67E816BB5CEF00100FEA</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>D25E67E616BB5CEF00100FEA</string>
-			</array>
-		</dict>
-		<key>D25E67E116BB5CEF00100FEA</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>D25E680916BB5CEF00100FEA</string>
-				<string>D25E680A16BB5CEF00100FEA</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>D25E67E316BB5CEF00100FEA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D25E67F816BB5CEF00100FEA</string>
-				<string>D25E67FC16BB5CEF00100FEA</string>
-				<string>D25E680816BB5CEF00100FEA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D25E67E416BB5CEF00100FEA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D25E681116BB775C00100FEA</string>
-				<string>D25E680F16BB774900100FEA</string>
-				<string>D25E67EC16BB5CEF00100FEA</string>
-				<string>D25E67EE16BB5CEF00100FEA</string>
-				<string>D25E67F016BB5CEF00100FEA</string>
-				<string>70837F9650674AD3BC654E82</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D25E67E516BB5CEF00100FEA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D25E67F616BB5CEF00100FEA</string>
-				<string>D25E67FE16BB5CEF00100FEA</string>
-				<string>D25E680016BB5CEF00100FEA</string>
-				<string>D25E680216BB5CEF00100FEA</string>
-				<string>D25E680516BB5CEF00100FEA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D25E67E616BB5CEF00100FEA</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>D25E680B16BB5CEF00100FEA</string>
-			<key>buildPhases</key>
-			<array>
-				<string>D25E67E316BB5CEF00100FEA</string>
-				<string>D25E67E416BB5CEF00100FEA</string>
-				<string>D25E67E516BB5CEF00100FEA</string>
-				<string>EA7360B2281A43FE9A265EDB</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>BikeNav</string>
-			<key>productName</key>
-			<string>BikeNav</string>
-			<key>productReference</key>
-			<string>D25E67E716BB5CEF00100FEA</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>D25E67E716BB5CEF00100FEA</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>BikeNav.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>D25E67E816BB5CEF00100FEA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D25E67E716BB5CEF00100FEA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E67EA16BB5CEF00100FEA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D25E681016BB775C00100FEA</string>
-				<string>D25E680E16BB774900100FEA</string>
-				<string>D25E67EB16BB5CEF00100FEA</string>
-				<string>D25E67ED16BB5CEF00100FEA</string>
-				<string>D25E67EF16BB5CEF00100FEA</string>
-				<string>BDCFA2D0626446C4B99054E0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E67EB16BB5CEF00100FEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>D25E67EC16BB5CEF00100FEA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D25E67EB16BB5CEF00100FEA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D25E67ED16BB5CEF00100FEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>D25E67EE16BB5CEF00100FEA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D25E67ED16BB5CEF00100FEA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D25E67EF16BB5CEF00100FEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>D25E67F016BB5CEF00100FEA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D25E67EF16BB5CEF00100FEA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D25E67F116BB5CEF00100FEA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D25E67FA16BB5CEF00100FEA</string>
-				<string>D25E67FB16BB5CEF00100FEA</string>
-				<string>D25E680316BB5CEF00100FEA</string>
-				<string>D25E680616BB5CEF00100FEA</string>
-				<string>D25E680716BB5CEF00100FEA</string>
-				<string>D25E67F216BB5CEF00100FEA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>BikeNav</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E67F216BB5CEF00100FEA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D25E67F316BB5CEF00100FEA</string>
-				<string>D25E67F416BB5CEF00100FEA</string>
-				<string>D25E67F716BB5CEF00100FEA</string>
-				<string>D25E67F916BB5CEF00100FEA</string>
-				<string>D25E67FD16BB5CEF00100FEA</string>
-				<string>D25E67FF16BB5CEF00100FEA</string>
-				<string>D25E680116BB5CEF00100FEA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E67F316BB5CEF00100FEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>BikeNav-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E67F416BB5CEF00100FEA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D25E67F516BB5CEF00100FEA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E67F516BB5CEF00100FEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E67F616BB5CEF00100FEA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D25E67F416BB5CEF00100FEA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D25E67F716BB5CEF00100FEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E67F816BB5CEF00100FEA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D25E67F716BB5CEF00100FEA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D25E67F916BB5CEF00100FEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>BikeNav-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E67FA16BB5CEF00100FEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E67FB16BB5CEF00100FEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E67FC16BB5CEF00100FEA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D25E67FB16BB5CEF00100FEA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D25E67FD16BB5CEF00100FEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>Default.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E67FE16BB5CEF00100FEA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D25E67FD16BB5CEF00100FEA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D25E67FF16BB5CEF00100FEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>Default@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E680016BB5CEF00100FEA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D25E67FF16BB5CEF00100FEA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D25E680116BB5CEF00100FEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>Default-568h@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E680216BB5CEF00100FEA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D25E680116BB5CEF00100FEA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D25E680316BB5CEF00100FEA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D25E680416BB5CEF00100FEA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>MainStoryboard.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E680416BB5CEF00100FEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/MainStoryboard.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E680516BB5CEF00100FEA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D25E680316BB5CEF00100FEA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D25E680616BB5CEF00100FEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E680716BB5CEF00100FEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D25E680816BB5CEF00100FEA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D25E680716BB5CEF00100FEA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D25E680916BB5CEF00100FEA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>D25E680A16BB5CEF00100FEA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.0</string>
-				<key>OTHER_CFLAGS</key>
-				<string>-DNS_BLOCK_ASSERTIONS=1</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>D25E680B16BB5CEF00100FEA</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>D25E680C16BB5CEF00100FEA</string>
-				<string>D25E680D16BB5CEF00100FEA</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>D25E680C16BB5CEF00100FEA</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>B6E80EDFB5D544AE8CFAD246</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>BikeNav/BikeNav-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>BikeNav/BikeNav-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>D25E680D16BB5CEF00100FEA</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>B6E80EDFB5D544AE8CFAD246</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>BikeNav/BikeNav-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>BikeNav/BikeNav-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>D25E680E16BB774900100FEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CFNetwork.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CFNetwork.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>D25E680F16BB774900100FEA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D25E680E16BB774900100FEA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D25E681016BB775C00100FEA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreData.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreData.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>D25E681116BB775C00100FEA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D25E681016BB775C00100FEA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA7360B2281A43FE9A265EDB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>1</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>D25E67DE16BB5CEF00100FEA</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70837F9650674AD3BC654E82 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCFA2D0626446C4B99054E0 /* libPods.a */; };
+		D25E67EC16BB5CEF00100FEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25E67EB16BB5CEF00100FEA /* UIKit.framework */; };
+		D25E67EE16BB5CEF00100FEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25E67ED16BB5CEF00100FEA /* Foundation.framework */; };
+		D25E67F016BB5CEF00100FEA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25E67EF16BB5CEF00100FEA /* CoreGraphics.framework */; };
+		D25E67F616BB5CEF00100FEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D25E67F416BB5CEF00100FEA /* InfoPlist.strings */; };
+		D25E67F816BB5CEF00100FEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E67F716BB5CEF00100FEA /* main.m */; };
+		D25E67FC16BB5CEF00100FEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E67FB16BB5CEF00100FEA /* AppDelegate.m */; };
+		D25E67FE16BB5CEF00100FEA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D25E67FD16BB5CEF00100FEA /* Default.png */; };
+		D25E680016BB5CEF00100FEA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D25E67FF16BB5CEF00100FEA /* Default@2x.png */; };
+		D25E680216BB5CEF00100FEA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D25E680116BB5CEF00100FEA /* Default-568h@2x.png */; };
+		D25E680516BB5CEF00100FEA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25E680316BB5CEF00100FEA /* MainStoryboard.storyboard */; };
+		D25E680816BB5CEF00100FEA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E680716BB5CEF00100FEA /* HomeViewController.m */; };
+		D25E680F16BB774900100FEA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25E680E16BB774900100FEA /* CFNetwork.framework */; };
+		D25E681116BB775C00100FEA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25E681016BB775C00100FEA /* CoreData.framework */; };
+		D25E682F16C08FD800100FEA /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E682E16C08FD800100FEA /* AuthViewController.m */; };
+		D25E683216C08FE900100FEA /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E683116C08FE900100FEA /* MapViewController.m */; };
+		D25E683516C0919000100FEA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E683416C0919000100FEA /* User.m */; };
+		D25E683816C091A100100FEA /* Ride.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E683716C091A100100FEA /* Ride.m */; };
+		D25E683B16C1AC4200100FEA /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E683A16C1AC4200100FEA /* History.m */; };
+		D25E683E16C1AC5D00100FEA /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E683D16C1AC5D00100FEA /* Settings.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B6E80EDFB5D544AE8CFAD246 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		BDCFA2D0626446C4B99054E0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D25E67E716BB5CEF00100FEA /* BikeNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D25E67EB16BB5CEF00100FEA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D25E67ED16BB5CEF00100FEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D25E67EF16BB5CEF00100FEA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D25E67F316BB5CEF00100FEA /* BikeNav-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BikeNav-Info.plist"; sourceTree = "<group>"; };
+		D25E67F516BB5CEF00100FEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D25E67F716BB5CEF00100FEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D25E67F916BB5CEF00100FEA /* BikeNav-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BikeNav-Prefix.pch"; sourceTree = "<group>"; };
+		D25E67FA16BB5CEF00100FEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D25E67FB16BB5CEF00100FEA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D25E67FD16BB5CEF00100FEA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D25E67FF16BB5CEF00100FEA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D25E680116BB5CEF00100FEA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D25E680416BB5CEF00100FEA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		D25E680616BB5CEF00100FEA /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		D25E680716BB5CEF00100FEA /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		D25E680E16BB774900100FEA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D25E681016BB775C00100FEA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D25E682D16C08FD800100FEA /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
+		D25E682E16C08FD800100FEA /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
+		D25E683016C08FE900100FEA /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		D25E683116C08FE900100FEA /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		D25E683316C0919000100FEA /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		D25E683416C0919000100FEA /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		D25E683616C091A100100FEA /* Ride.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ride.h; sourceTree = "<group>"; };
+		D25E683716C091A100100FEA /* Ride.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ride.m; sourceTree = "<group>"; };
+		D25E683916C1AC4200100FEA /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
+		D25E683A16C1AC4200100FEA /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
+		D25E683C16C1AC5D00100FEA /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		D25E683D16C1AC5D00100FEA /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D25E67E416BB5CEF00100FEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D25E681116BB775C00100FEA /* CoreData.framework in Frameworks */,
+				D25E680F16BB774900100FEA /* CFNetwork.framework in Frameworks */,
+				D25E67EC16BB5CEF00100FEA /* UIKit.framework in Frameworks */,
+				D25E67EE16BB5CEF00100FEA /* Foundation.framework in Frameworks */,
+				D25E67F016BB5CEF00100FEA /* CoreGraphics.framework in Frameworks */,
+				70837F9650674AD3BC654E82 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D25E67DC16BB5CEF00100FEA = {
+			isa = PBXGroup;
+			children = (
+				D25E67F116BB5CEF00100FEA /* BikeNav */,
+				D25E67EA16BB5CEF00100FEA /* Frameworks */,
+				D25E67E816BB5CEF00100FEA /* Products */,
+				B6E80EDFB5D544AE8CFAD246 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		D25E67E816BB5CEF00100FEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D25E67E716BB5CEF00100FEA /* BikeNav.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D25E67EA16BB5CEF00100FEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D25E681016BB775C00100FEA /* CoreData.framework */,
+				D25E680E16BB774900100FEA /* CFNetwork.framework */,
+				D25E67EB16BB5CEF00100FEA /* UIKit.framework */,
+				D25E67ED16BB5CEF00100FEA /* Foundation.framework */,
+				D25E67EF16BB5CEF00100FEA /* CoreGraphics.framework */,
+				BDCFA2D0626446C4B99054E0 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D25E67F116BB5CEF00100FEA /* BikeNav */ = {
+			isa = PBXGroup;
+			children = (
+				D25E67FA16BB5CEF00100FEA /* AppDelegate.h */,
+				D25E67FB16BB5CEF00100FEA /* AppDelegate.m */,
+				D25E680316BB5CEF00100FEA /* MainStoryboard.storyboard */,
+				D25E680616BB5CEF00100FEA /* HomeViewController.h */,
+				D25E680716BB5CEF00100FEA /* HomeViewController.m */,
+				D25E682D16C08FD800100FEA /* AuthViewController.h */,
+				D25E682E16C08FD800100FEA /* AuthViewController.m */,
+				D25E683016C08FE900100FEA /* MapViewController.h */,
+				D25E683116C08FE900100FEA /* MapViewController.m */,
+				D25E683316C0919000100FEA /* User.h */,
+				D25E683416C0919000100FEA /* User.m */,
+				D25E683616C091A100100FEA /* Ride.h */,
+				D25E683716C091A100100FEA /* Ride.m */,
+				D25E683916C1AC4200100FEA /* History.h */,
+				D25E683A16C1AC4200100FEA /* History.m */,
+				D25E683C16C1AC5D00100FEA /* Settings.h */,
+				D25E683D16C1AC5D00100FEA /* Settings.m */,
+				D25E67F216BB5CEF00100FEA /* Supporting Files */,
+			);
+			path = BikeNav;
+			sourceTree = "<group>";
+		};
+		D25E67F216BB5CEF00100FEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D25E67F316BB5CEF00100FEA /* BikeNav-Info.plist */,
+				D25E67F416BB5CEF00100FEA /* InfoPlist.strings */,
+				D25E67F716BB5CEF00100FEA /* main.m */,
+				D25E67F916BB5CEF00100FEA /* BikeNav-Prefix.pch */,
+				D25E67FD16BB5CEF00100FEA /* Default.png */,
+				D25E67FF16BB5CEF00100FEA /* Default@2x.png */,
+				D25E680116BB5CEF00100FEA /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D25E67E616BB5CEF00100FEA /* BikeNav */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D25E680B16BB5CEF00100FEA /* Build configuration list for PBXNativeTarget "BikeNav" */;
+			buildPhases = (
+				D25E67E316BB5CEF00100FEA /* Sources */,
+				D25E67E416BB5CEF00100FEA /* Frameworks */,
+				D25E67E516BB5CEF00100FEA /* Resources */,
+				EA7360B2281A43FE9A265EDB /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BikeNav;
+			productName = BikeNav;
+			productReference = D25E67E716BB5CEF00100FEA /* BikeNav.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D25E67DE16BB5CEF00100FEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Russell Wyatt";
+			};
+			buildConfigurationList = D25E67E116BB5CEF00100FEA /* Build configuration list for PBXProject "BikeNav" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D25E67DC16BB5CEF00100FEA;
+			productRefGroup = D25E67E816BB5CEF00100FEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D25E67E616BB5CEF00100FEA /* BikeNav */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D25E67E516BB5CEF00100FEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D25E67F616BB5CEF00100FEA /* InfoPlist.strings in Resources */,
+				D25E67FE16BB5CEF00100FEA /* Default.png in Resources */,
+				D25E680016BB5CEF00100FEA /* Default@2x.png in Resources */,
+				D25E680216BB5CEF00100FEA /* Default-568h@2x.png in Resources */,
+				D25E680516BB5CEF00100FEA /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EA7360B2281A43FE9A265EDB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D25E67E316BB5CEF00100FEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D25E67F816BB5CEF00100FEA /* main.m in Sources */,
+				D25E67FC16BB5CEF00100FEA /* AppDelegate.m in Sources */,
+				D25E680816BB5CEF00100FEA /* HomeViewController.m in Sources */,
+				D25E682F16C08FD800100FEA /* AuthViewController.m in Sources */,
+				D25E683216C08FE900100FEA /* MapViewController.m in Sources */,
+				D25E683516C0919000100FEA /* User.m in Sources */,
+				D25E683816C091A100100FEA /* Ride.m in Sources */,
+				D25E683B16C1AC4200100FEA /* History.m in Sources */,
+				D25E683E16C1AC5D00100FEA /* Settings.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D25E67F416BB5CEF00100FEA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D25E67F516BB5CEF00100FEA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D25E680316BB5CEF00100FEA /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D25E680416BB5CEF00100FEA /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D25E680916BB5CEF00100FEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D25E680A16BB5CEF00100FEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D25E680C16BB5CEF00100FEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6E80EDFB5D544AE8CFAD246 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BikeNav/BikeNav-Prefix.pch";
+				INFOPLIST_FILE = "BikeNav/BikeNav-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D25E680D16BB5CEF00100FEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6E80EDFB5D544AE8CFAD246 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BikeNav/BikeNav-Prefix.pch";
+				INFOPLIST_FILE = "BikeNav/BikeNav-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D25E67E116BB5CEF00100FEA /* Build configuration list for PBXProject "BikeNav" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D25E680916BB5CEF00100FEA /* Debug */,
+				D25E680A16BB5CEF00100FEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D25E680B16BB5CEF00100FEA /* Build configuration list for PBXNativeTarget "BikeNav" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D25E680C16BB5CEF00100FEA /* Debug */,
+				D25E680D16BB5CEF00100FEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D25E67DE16BB5CEF00100FEA /* Project object */;
+}

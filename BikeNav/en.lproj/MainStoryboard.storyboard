@@ -1,23 +1,136 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Auth View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="AuthViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4n8-xX-gcJ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="196" id="XdV-qZ-WaC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="MzY-GN-gdK"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IQD-35-P0j">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="196" id="a0Y-om-aD3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="fz5-dJ-NA3"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ee-pe-Rra">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="TaD-nl-wUV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginUser" destination="2" eventType="touchUpInside" id="AC0-Y0-wh6"/>
+                                    <action selector="signInViewSwitch:" destination="2" eventType="touchUpInside" id="QaB-bX-YLx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IQD-35-P0j" firstAttribute="top" secondItem="3" secondAttribute="top" constant="83" id="5mn-s6-VFv"/>
+                            <constraint firstAttribute="bottom" secondItem="5Ee-pe-Rra" secondAttribute="bottom" constant="41" id="bwQ-Gy-8O6"/>
+                            <constraint firstItem="5Ee-pe-Rra" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="105" id="dhB-iC-v8X"/>
+                            <constraint firstItem="4n8-xX-gcJ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="61" id="gYH-ee-Tbm"/>
+                            <constraint firstItem="IQD-35-P0j" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="hUM-tl-ERo"/>
+                            <constraint firstItem="4n8-xX-gcJ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="32" id="xDZ-4A-V3r"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="4n8-xX-gcJ" id="uiJ-pD-LXW"/>
+                        <outlet property="passwordTextField" destination="IQD-35-P0j" id="ULQ-1J-K1Y"/>
+                        <outlet property="signInButton" destination="5Ee-pe-Rra" id="gkd-gm-qC0"/>
+                        <outlet property="view" destination="3" id="ZEq-ki-lDB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-912" y="-214"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="Caq-hJ-nHf">
+            <objects>
+                <viewController storyboardIdentifier="homeView" id="xoO-jR-t7b" customClass="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v7E-Vv-43w">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cf-rI-9xM">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Success">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testUser" destination="xoO-jR-t7b" eventType="touchUpInside" id="0Rd-Ew-SwQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2cf-rI-9xM" firstAttribute="centerX" secondItem="v7E-Vv-43w" secondAttribute="centerX" type="default" id="gKr-Ru-sfJ"/>
+                            <constraint firstAttribute="bottom" secondItem="2cf-rI-9xM" secondAttribute="bottom" constant="189" id="hVH-7S-gDI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="op3-XL-YHQ"/>
+                    <connections>
+                        <outlet property="userTestButton" destination="2cf-rI-9xM" id="uEq-99-pUh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sNY-qb-y4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-413" y="-214"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AuthViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AuthViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginUser"/>
+                <relationship kind="action" name="signInViewSwitch:"/>
+                <relationship kind="outlet" name="emailTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="signInButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="HomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="testUser"/>
+                <relationship kind="outlet" name="userTestButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

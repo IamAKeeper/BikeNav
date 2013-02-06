@@ -6,13 +6,14 @@
 //  Copyright (c) 2013 Russell Wyatt. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HomeViewController.h"
 
-@interface ViewController ()
 
-@end
 
-@implementation ViewController
+
+@implementation HomeViewController
+
+@synthesize theUser;
 
 - (void)viewDidLoad
 {
@@ -25,6 +26,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)testUser{
+    NSLog(@"Username: %@", theUser.userName);
 }
 
 @end

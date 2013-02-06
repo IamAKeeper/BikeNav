@@ -1,13 +1,13 @@
 //
-//  ViewController.h
+//  MapViewController.h
 //  BikeNav
 //
-//  Created by Russell Wyatt on 1/31/13.
+//  Created by Russell Wyatt on 2/4/13.
 //  Copyright (c) 2013 Russell Wyatt. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MapViewController : UIViewController
 
 @end
