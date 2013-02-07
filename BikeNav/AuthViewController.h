@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HomeViewController.h"
+#import "IndexViewController.h"
 
 
 @interface AuthViewController : UIViewController <UITextFieldDelegate>

@@ -69,7 +69,107 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-912" y="-214"/>
+            <point key="canvasLocation" x="-948" y="-351"/>
+        </scene>
+        <!--Index View Controller-->
+        <scene sceneID="SC4-kU-eOM">
+            <objects>
+                <viewController storyboardIdentifier="indexView" id="fwz-Qb-qEL" customClass="IndexViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="epg-DA-QRW">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H62-bD-gx3">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startNewRide:" destination="fwz-Qb-qEL" eventType="touchUpInside" id="NZh-O4-v4C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUF-MR-TyQ">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="End">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endRide" destination="fwz-Qb-qEL" eventType="touchUpInside" id="V1i-ln-uMw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H02-Wh-S5K">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="History">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToHistory" destination="fwz-Qb-qEL" eventType="touchUpInside" id="Nfw-wx-Zoo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMj-5i-ic4">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToSettings" destination="fwz-Qb-qEL" eventType="touchUpInside" id="BnZ-p0-UKe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yM-60-3LX">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueRide" destination="fwz-Qb-qEL" eventType="touchUpInside" id="hBd-kf-GCi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H62-bD-gx3" firstAttribute="top" secondItem="epg-DA-QRW" secondAttribute="top" constant="252" id="3gS-e1-x1N"/>
+                            <constraint firstAttribute="trailing" secondItem="MUF-MR-TyQ" secondAttribute="trailing" constant="65" id="4Eq-OL-Fkd"/>
+                            <constraint firstItem="MUF-MR-TyQ" firstAttribute="baseline" secondItem="H62-bD-gx3" secondAttribute="baseline" type="default" id="4y7-tf-vHI"/>
+                            <constraint firstItem="SMj-5i-ic4" firstAttribute="baseline" secondItem="H02-Wh-S5K" secondAttribute="baseline" type="default" id="C6F-2g-TMc"/>
+                            <constraint firstItem="1yM-60-3LX" firstAttribute="top" secondItem="epg-DA-QRW" secondAttribute="top" constant="155" id="Dax-rU-3Bc"/>
+                            <constraint firstItem="H02-Wh-S5K" firstAttribute="leading" secondItem="H62-bD-gx3" secondAttribute="leading" type="default" id="bmw-Zb-YP3"/>
+                            <constraint firstAttribute="trailing" secondItem="SMj-5i-ic4" secondAttribute="trailing" constant="43" id="mLp-4c-Npd"/>
+                            <constraint firstItem="H62-bD-gx3" firstAttribute="leading" secondItem="epg-DA-QRW" secondAttribute="leading" constant="38" id="sg1-zj-dAf"/>
+                            <constraint firstAttribute="bottom" secondItem="H02-Wh-S5K" secondAttribute="bottom" constant="127" id="x4c-gy-JO1"/>
+                            <constraint firstItem="1yM-60-3LX" firstAttribute="leading" secondItem="epg-DA-QRW" secondAttribute="leading" constant="114" id="zfa-Ra-bSt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="continueRideButton" destination="1yM-60-3LX" id="hYX-JF-OPa"/>
+                        <outlet property="endRideButton" destination="MUF-MR-TyQ" id="0O0-ai-SZf"/>
+                        <outlet property="historyButton" destination="H02-Wh-S5K" id="DbN-hg-4jF"/>
+                        <outlet property="settingsButton" destination="SMj-5i-ic4" id="eHn-2Q-QqC"/>
+                        <outlet property="startRideButton" destination="H62-bD-gx3" id="iiC-0q-Q3X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tal-NA-lVs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-549" y="-353"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Caq-hJ-nHf">
@@ -93,7 +193,6 @@
                                 </state>
                                 <connections>
                                     <action selector="testUser" destination="xoO-jR-t7b" eventType="touchUpInside" id="0Rd-Ew-SwQ"/>
-                                    <action selector="testViews" destination="xoO-jR-t7b" eventType="touchUpInside" id="Ihu-QH-ivH"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fhh-xT-d77" customClass="DataDisplay">
@@ -143,7 +242,6 @@
                             <constraint firstItem="ZY5-Fv-i3v" firstAttribute="leading" secondItem="v7E-Vv-43w" secondAttribute="leading" constant="35" type="user" id="k0B-wy-wuR"/>
                             <constraint firstItem="ZY5-Fv-i3v" firstAttribute="top" secondItem="2cf-rI-9xM" secondAttribute="top" type="default" id="qW4-10-1Ut"/>
                             <constraint firstAttribute="bottom" secondItem="2cf-rI-9xM" secondAttribute="bottom" constant="30" type="user" id="qiq-Wi-4sr"/>
-                            <constraint firstItem="ZY5-Fv-i3v" firstAttribute="baseline" secondItem="2cf-rI-9xM" secondAttribute="baseline" type="default" id="rer-4Q-Q6d"/>
                             <constraint firstItem="ZY5-Fv-i3v" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="v7E-Vv-43w" secondAttribute="leading" constant="35" type="user" id="sz5-m2-MwZ"/>
                             <constraint firstItem="Fhh-xT-d77" firstAttribute="top" secondItem="v7E-Vv-43w" secondAttribute="top" constant="30" type="user" id="wpP-5j-RXr"/>
                             <constraint firstItem="zeR-Em-h79" firstAttribute="top" secondItem="v7E-Vv-43w" secondAttribute="top" priority="1" constant="235" type="user" id="xZ6-KK-IuL"/>
@@ -151,7 +249,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="op3-XL-YHQ"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="displayOne" destination="Fhh-xT-d77" id="hRz-Vs-OFI"/>
                         <outlet property="displayTwo" destination="zeR-Em-h79" id="Vlq-BY-1ZO"/>
@@ -160,37 +257,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNY-qb-y4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-537" y="-351"/>
+            <point key="canvasLocation" x="-155" y="-625"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="AuthViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AuthViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loginUser"/>
-                <relationship kind="action" name="signInViewSwitch:"/>
-                <relationship kind="outlet" name="emailTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="signInButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="DataDisplay" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DataDisplay.h"/>
-        </class>
-        <class className="HomeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="testUser"/>
-                <relationship kind="action" name="testViews"/>
-                <relationship kind="outlet" name="displayOne" candidateClass="DataDisplay"/>
-                <relationship kind="outlet" name="displayTwo" candidateClass="DataDisplay"/>
-                <relationship kind="outlet" name="userTestButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

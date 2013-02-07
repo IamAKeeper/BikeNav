@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		70837F9650674AD3BC654E82 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCFA2D0626446C4B99054E0 /* libPods.a */; };
+		D2513DE416C44D5B0019021A /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2513DE316C44D5B0019021A /* IndexViewController.m */; };
 		D25E67EC16BB5CEF00100FEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25E67EB16BB5CEF00100FEA /* UIKit.framework */; };
 		D25E67EE16BB5CEF00100FEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25E67ED16BB5CEF00100FEA /* Foundation.framework */; };
 		D25E67F016BB5CEF00100FEA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25E67EF16BB5CEF00100FEA /* CoreGraphics.framework */; };
@@ -33,6 +34,8 @@
 /* Begin PBXFileReference section */
 		B6E80EDFB5D544AE8CFAD246 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		BDCFA2D0626446C4B99054E0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2513DE216C44D5B0019021A /* IndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexViewController.h; sourceTree = "<group>"; };
+		D2513DE316C44D5B0019021A /* IndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexViewController.m; sourceTree = "<group>"; };
 		D25E67E716BB5CEF00100FEA /* BikeNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25E67EB16BB5CEF00100FEA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D25E67ED16BB5CEF00100FEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -120,6 +123,8 @@
 			children = (
 				D25E67FA16BB5CEF00100FEA /* AppDelegate.h */,
 				D25E67FB16BB5CEF00100FEA /* AppDelegate.m */,
+				D2513DE216C44D5B0019021A /* IndexViewController.h */,
+				D2513DE316C44D5B0019021A /* IndexViewController.m */,
 				D25E680316BB5CEF00100FEA /* MainStoryboard.storyboard */,
 				D25E680616BB5CEF00100FEA /* HomeViewController.h */,
 				D25E680716BB5CEF00100FEA /* HomeViewController.m */,
@@ -250,6 +255,7 @@
 				D25E683B16C1AC4200100FEA /* History.m in Sources */,
 				D25E683E16C1AC5D00100FEA /* Settings.m in Sources */,
 				D25E684116C1DE4B00100FEA /* DataDisplay.m in Sources */,
+				D2513DE416C44D5B0019021A /* IndexViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

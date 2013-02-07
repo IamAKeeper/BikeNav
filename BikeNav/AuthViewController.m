@@ -51,11 +51,11 @@
 }
 
 - (IBAction) signInViewSwitch:(id)sender{
-    HomeViewController *homeVC=[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"];
+    IndexViewController *indexVC=[self.storyboard instantiateViewControllerWithIdentifier:@"indexView"];
     
-    homeVC.theUser = theUser;
+    indexVC.theUser = theUser;
     
-    [self presentViewController:homeVC animated:YES completion:nil];
+    [self presentViewController:indexVC animated:YES completion:nil];
     
 }
 

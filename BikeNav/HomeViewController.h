@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) IBOutlet DataDisplay *displayOne;
 @property (nonatomic, retain) IBOutlet DataDisplay *displayTwo;
+@property Ride *currentRide;
 
 @property (strong, nonatomic) User *theUser;
 @property IBOutlet UIButton *userTestButton;

@@ -14,12 +14,12 @@
 @implementation HomeViewController
 
 @synthesize displayOne, displayTwo;
-@synthesize theUser;
+@synthesize theUser,currentRide;
 
 - (void)viewDidLoad
 {
 
-    
+    currentRide = theUser.userRide;
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view, typically from a nib.
@@ -32,7 +32,9 @@
 }
 
 - (IBAction)testUser{
+    NSLog(@"Time elapsed: %f", [currentRide timeElapsed]);
     NSLog(@"Username: %@", theUser.userName);
+    NSLog(@"StartDate: %@", currentRide.startTime);
 }
 
 - (IBAction)testViews{

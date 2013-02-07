@@ -10,4 +10,14 @@
 
 @interface Ride : NSObject
 
+@property double distanceCovered;
+@property NSDate *startTime;
+@property double idleTime;
+//GPS information
+
+-(id)init;
+-(double) calcAverageSpeed;
+-(NSTimeInterval) timeElapsed;
+-(NSTimeInterval)calcIdleTime;
+
 @end
