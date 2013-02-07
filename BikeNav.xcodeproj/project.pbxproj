@@ -27,6 +27,7 @@
 		D25E683816C091A100100FEA /* Ride.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E683716C091A100100FEA /* Ride.m */; };
 		D25E683B16C1AC4200100FEA /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E683A16C1AC4200100FEA /* History.m */; };
 		D25E683E16C1AC5D00100FEA /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E683D16C1AC5D00100FEA /* Settings.m */; };
+		D25E684116C1DE4B00100FEA /* DataDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E684016C1DE4B00100FEA /* DataDisplay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		D25E683A16C1AC4200100FEA /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
 		D25E683C16C1AC5D00100FEA /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		D25E683D16C1AC5D00100FEA /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		D25E683F16C1DE4B00100FEA /* DataDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataDisplay.h; sourceTree = "<group>"; };
+		D25E684016C1DE4B00100FEA /* DataDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataDisplay.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 				D25E683A16C1AC4200100FEA /* History.m */,
 				D25E683C16C1AC5D00100FEA /* Settings.h */,
 				D25E683D16C1AC5D00100FEA /* Settings.m */,
+				D25E683F16C1DE4B00100FEA /* DataDisplay.h */,
+				D25E684016C1DE4B00100FEA /* DataDisplay.m */,
 				D25E67F216BB5CEF00100FEA /* Supporting Files */,
 			);
 			path = BikeNav;
@@ -244,6 +249,7 @@
 				D25E683816C091A100100FEA /* Ride.m in Sources */,
 				D25E683B16C1AC4200100FEA /* History.m in Sources */,
 				D25E683E16C1AC5D00100FEA /* Settings.m in Sources */,
+				D25E684116C1DE4B00100FEA /* DataDisplay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

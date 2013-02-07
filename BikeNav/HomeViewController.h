@@ -7,14 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataDisplay.h"
 
 #include "User.h"
 
 @interface HomeViewController : UIViewController
 
+@property (nonatomic, retain) IBOutlet DataDisplay *displayOne;
+@property (nonatomic, retain) IBOutlet DataDisplay *displayTwo;
+
 @property (strong, nonatomic) User *theUser;
 @property IBOutlet UIButton *userTestButton;
 
 -(IBAction)testUser;
+
+-(IBAction)testViews;
 
 @end

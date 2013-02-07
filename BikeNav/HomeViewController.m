@@ -13,12 +13,15 @@
 
 @implementation HomeViewController
 
+@synthesize displayOne, displayTwo;
 @synthesize theUser;
 
 - (void)viewDidLoad
 {
+
+    
     [super viewDidLoad];
-    //A comment to commit
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -30,6 +33,11 @@
 
 - (IBAction)testUser{
     NSLog(@"Username: %@", theUser.userName);
+}
+
+- (IBAction)testViews{
+    NSLog(@"ViewOne Height:%f, Width: %f, Origin: %f,%f", displayOne.bounds.size.height, displayOne.bounds.size.width, displayOne.bounds.origin.x, displayOne.bounds.origin.y);
+    
 }
 
 @end
