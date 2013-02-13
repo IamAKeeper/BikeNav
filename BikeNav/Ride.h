@@ -7,17 +7,33 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreMotion/CoreMotion.h>
+
+
 
 @interface Ride : NSObject
 
+//Display properties
 @property double distanceCovered;
 @property NSDate *startTime;
 @property double idleTime;
-//GPS information
+@property double currentSpeed;
+@property double currentLocation;
 
+//Acceleromter properties
+@property int __block didAccelerate;
+@property int __block accelCount;
+@property double __block accelSum;
+
+
+//GPS properties
+
+
+//Methods
 -(id)init;
 -(double) calcAverageSpeed;
 -(NSTimeInterval) timeElapsed;
 -(NSTimeInterval)calcIdleTime;
+-(double) calcCurrentSpeedwithDistance: (double) distance overTime: (NSTimeInterval) time;
 
 @end

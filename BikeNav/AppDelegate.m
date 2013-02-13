@@ -7,12 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import <CoreLocation/CoreLocation.h>
+
+@interface AppDelegate ()
+{
+    CMMotionManager *motionManager;
+}
+
+@end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Create a location manager instance to determine if location services are enabled. This manager instance will be
+    // immediately released afterwards.
     return YES;
 }
 							
@@ -42,5 +51,15 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (CMMotionManager *)rideManager
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        motionManager = [[CMMotionManager alloc] init];
+    });
+    return motionManager;
+}
+
 
 @end

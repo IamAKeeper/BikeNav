@@ -10,6 +10,15 @@
 
 @interface DataDisplay : UIView
 
+@property double rideData;
+@property int displayState;
+
+-(void) drawCurrentSpeedWithContext: (CGContextRef) myContext andRect: (CGRect) contextRect;
+-(void) drawtotalDistanceWithContext: (CGContextRef) myContext andRect: (CGRect) contextRect;
+-(void) drawAverageSpeedWithContext: (CGContextRef) myContext andRect: (CGRect) contextRect;
+-(void) drawTimeWithText: (char*) timeText andContext: (CGContextRef) myContext andRect: (CGRect) contextRect;
+
+-(void)updateDisplayState;
 
 
 @end

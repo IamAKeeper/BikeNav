@@ -14,3 +14,4 @@
 #endif
 
 #define MY_APP_DELEGATE ((AppDelegate *) [UIApplication sharedApplicatipn].delegate)
+#define M_S_TO_MI_HR 2.23694
