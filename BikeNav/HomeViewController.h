@@ -29,16 +29,10 @@
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *lastLocation;
 
-//TestButtons
-@property IBOutlet UIButton *userTestButton;
-
--(IBAction)testUser;
-
--(IBAction)testViews;
-
 -(IBAction)switchDisplay:(UITapGestureRecognizer *) sender;
 
 -(void) updateDataWithTimer: (NSTimer *) myTimer;
 -(void) updateTimeWithTimer: (NSTimer *) myTimer;
+-(void) beginNewRide;
 
 @end

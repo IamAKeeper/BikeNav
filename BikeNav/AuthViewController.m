@@ -50,12 +50,6 @@
     NSLog(@"Email: %@ and Password: %@", emailTextField.text, passwordTextField.text);
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"logInUser"]) {
-        IndexViewController *destViewController = segue.destinationViewController;
-        destViewController.theUser = theUser;
-    }
-}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -74,6 +68,20 @@
         [passwordTextField resignFirstResponder];
     }
     return YES;
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    NSString * segueIdentifier = [segue identifier];
+    if([segueIdentifier isEqualToString:@"tabBarSegue"]){
+        
+        HomeViewController* homeView = [[HomeViewController alloc] init];
+        TabBarController* tbc = [segue destinationViewController];
+        homeView = (HomeViewController *)[[tbc customizableViewControllers] objectAtIndex:0];
+        
+        homeView.theUser = theUser;
+        
+    }
 }
 
 @end

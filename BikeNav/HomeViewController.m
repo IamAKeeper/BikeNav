@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "TabBarController.h"
 
 
 
@@ -22,10 +23,26 @@
 {
     [super viewDidLoad];
     
+    NSLog(@"ViewDidLoad");
+    
+    NSTimer *timerTwo = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateTimeWithTimer:) userInfo:nil repeats:YES];
+    
+	// Do any additional setup after loading the view, typically from a nib.4
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void) beginNewRide
+{
+    theUser.userRide = [[Ride alloc] init];
+    
     currentRide = theUser.userRide;
     
     NSTimer *timerOne = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(updateDataWithTimer:) userInfo:nil repeats:YES];
-    NSTimer *timerTwo = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateTimeWithTimer:) userInfo:nil repeats:YES];
     
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
@@ -35,13 +52,11 @@
     [locationManager startUpdatingLocation];
     lastLocation = nil;
     
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
+-(void) endCurrentRide
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 -(void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
@@ -123,13 +138,6 @@
         tDisplay.timeData = [currentRide timeElapsed];
     [tDisplay setNeedsDisplay];
 }
-
-
-- (IBAction)testUser{
-    NSLog(@"Time elapsed: %f", [currentRide timeElapsed]);
-
-}
-
 
 
 @end

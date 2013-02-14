@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface MapViewController : UIViewController
+
+@property (strong, nonatomic) User *theUser;
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 
 @end
