@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DataDisplay.h"
+#import "DistanceDisplay.h"
+#import "SpeedDisplay.h"
+#import "TimeDisplay.h"
 #import <CoreLocation/CoreLocation.h>
 
 #include "User.h"
@@ -15,8 +17,9 @@
 @interface HomeViewController : UIViewController <CLLocationManagerDelegate>
 
 //Define views for displaying information
-@property (nonatomic, retain) IBOutlet DataDisplay *displayOne;
-@property (nonatomic, retain) IBOutlet DataDisplay *displayTwo;
+@property (nonatomic, retain) IBOutlet DistanceDisplay *dDisplay;
+@property (nonatomic, retain) IBOutlet SpeedDisplay *sDisplay;
+@property (nonatomic, retain) IBOutlet TimeDisplay *tDisplay;
 
 //Associated property of the current Ride and User
 @property Ride *currentRide;
@@ -33,8 +36,9 @@
 
 -(IBAction)testViews;
 
--(IBAction)switchDisplay:(UIButton *)sender;
+-(IBAction)switchDisplay:(UITapGestureRecognizer *) sender;
 
 -(void) updateDataWithTimer: (NSTimer *) myTimer;
+-(void) updateTimeWithTimer: (NSTimer *) myTimer;
 
 @end

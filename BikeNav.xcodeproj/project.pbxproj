@@ -28,9 +28,11 @@
 		D25E683816C091A100100FEA /* Ride.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E683716C091A100100FEA /* Ride.m */; };
 		D25E683B16C1AC4200100FEA /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E683A16C1AC4200100FEA /* History.m */; };
 		D25E683E16C1AC5D00100FEA /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E683D16C1AC5D00100FEA /* Settings.m */; };
-		D25E684116C1DE4B00100FEA /* DataDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E684016C1DE4B00100FEA /* DataDisplay.m */; };
 		D28E4E1E16C5C0F90053CB91 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28E4E1D16C5C0F90053CB91 /* CoreMotion.framework */; };
 		D294479816CB132C0022D96A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D294479716CB132C0022D96A /* CoreLocation.framework */; };
+		D29447A216CC41FD0022D96A /* TimeDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = D29447A116CC41FD0022D96A /* TimeDisplay.m */; };
+		D29447A516CC50C60022D96A /* DistanceDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = D29447A416CC50C60022D96A /* DistanceDisplay.m */; };
+		D29447A816CC50D50022D96A /* SpeedDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = D29447A716CC50D50022D96A /* SpeedDisplay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,10 +70,14 @@
 		D25E683A16C1AC4200100FEA /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
 		D25E683C16C1AC5D00100FEA /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		D25E683D16C1AC5D00100FEA /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
-		D25E683F16C1DE4B00100FEA /* DataDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataDisplay.h; sourceTree = "<group>"; };
-		D25E684016C1DE4B00100FEA /* DataDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataDisplay.m; sourceTree = "<group>"; };
 		D28E4E1D16C5C0F90053CB91 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		D294479716CB132C0022D96A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D29447A016CC41FD0022D96A /* TimeDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeDisplay.h; sourceTree = "<group>"; };
+		D29447A116CC41FD0022D96A /* TimeDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeDisplay.m; sourceTree = "<group>"; };
+		D29447A316CC50C60022D96A /* DistanceDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistanceDisplay.h; sourceTree = "<group>"; };
+		D29447A416CC50C60022D96A /* DistanceDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistanceDisplay.m; sourceTree = "<group>"; };
+		D29447A616CC50D50022D96A /* SpeedDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedDisplay.h; sourceTree = "<group>"; };
+		D29447A716CC50D50022D96A /* SpeedDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedDisplay.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +154,12 @@
 				D25E683A16C1AC4200100FEA /* History.m */,
 				D25E683C16C1AC5D00100FEA /* Settings.h */,
 				D25E683D16C1AC5D00100FEA /* Settings.m */,
-				D25E683F16C1DE4B00100FEA /* DataDisplay.h */,
-				D25E684016C1DE4B00100FEA /* DataDisplay.m */,
+				D29447A016CC41FD0022D96A /* TimeDisplay.h */,
+				D29447A116CC41FD0022D96A /* TimeDisplay.m */,
+				D29447A316CC50C60022D96A /* DistanceDisplay.h */,
+				D29447A416CC50C60022D96A /* DistanceDisplay.m */,
+				D29447A616CC50D50022D96A /* SpeedDisplay.h */,
+				D29447A716CC50D50022D96A /* SpeedDisplay.m */,
 				D25E67F216BB5CEF00100FEA /* Supporting Files */,
 			);
 			path = BikeNav;
@@ -262,8 +272,10 @@
 				D25E683816C091A100100FEA /* Ride.m in Sources */,
 				D25E683B16C1AC4200100FEA /* History.m in Sources */,
 				D25E683E16C1AC5D00100FEA /* Settings.m in Sources */,
-				D25E684116C1DE4B00100FEA /* DataDisplay.m in Sources */,
 				D2513DE416C44D5B0019021A /* IndexViewController.m in Sources */,
+				D29447A216CC41FD0022D96A /* TimeDisplay.m in Sources */,
+				D29447A516CC50C60022D96A /* DistanceDisplay.m in Sources */,
+				D29447A816CC50D50022D96A /* SpeedDisplay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,14 +36,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction) startNewRide:(id)sender{
-    
-    theUser.userRide = [[Ride alloc] init];
-    HomeViewController *homeVC=[self.storyboard instantiateViewControllerWithIdentifier:@"homeView"];
-    
-    homeVC.theUser = theUser;
-    
-    [self presentViewController:homeVC animated:YES completion:nil];
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"viewRide"]) {
+        //temporary ride init
+        theUser.userRide = [[Ride alloc] init];
+        HomeViewController *destViewController = segue.destinationViewController;
+        destViewController.theUser = theUser;
+    }
 }
 
 @end

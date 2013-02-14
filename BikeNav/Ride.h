@@ -19,6 +19,7 @@
 @property double idleTime;
 @property double currentSpeed;
 @property double currentLocation;
+@property double altitudeGain;
 
 //Acceleromter properties
 @property int __block didAccelerate;

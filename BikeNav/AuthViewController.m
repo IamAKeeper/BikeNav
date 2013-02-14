@@ -50,13 +50,11 @@
     NSLog(@"Email: %@ and Password: %@", emailTextField.text, passwordTextField.text);
 }
 
-- (IBAction) signInViewSwitch:(id)sender{
-    IndexViewController *indexVC=[self.storyboard instantiateViewControllerWithIdentifier:@"indexView"];
-    
-    indexVC.theUser = theUser;
-    
-    [self presentViewController:indexVC animated:YES completion:nil];
-    
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"logInUser"]) {
+        IndexViewController *destViewController = segue.destinationViewController;
+        destViewController.theUser = theUser;
+    }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

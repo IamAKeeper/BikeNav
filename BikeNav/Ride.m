@@ -70,8 +70,8 @@
                         accelCount = 0;
                         accelSum = 0.0;
                 }
-            NSLog(@"modifiers: %d", didAccelerate);
-            NSLog(@"count: %d", accelCount);
+            //NSLog(@"modifiers: %d", didAccelerate);
+            //NSLog(@"count: %d", accelCount);
             }];
          }
     else

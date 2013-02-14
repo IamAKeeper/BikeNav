@@ -13,7 +13,7 @@
 
 @implementation HomeViewController
 
-@synthesize displayOne, displayTwo;
+@synthesize dDisplay, sDisplay, tDisplay;
 @synthesize theUser, currentRide;
 @synthesize locationManager, lastLocation;
 
@@ -24,8 +24,8 @@
     
     currentRide = theUser.userRide;
     
-    NSTimer *timerOne = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateDataWithTimer:) userInfo:displayOne repeats:YES];
-    NSTimer *timerTwo = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateDataWithTimer:) userInfo:displayTwo repeats:YES];
+    NSTimer *timerOne = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(updateDataWithTimer:) userInfo:nil repeats:YES];
+    NSTimer *timerTwo = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateTimeWithTimer:) userInfo:nil repeats:YES];
     
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
@@ -67,54 +67,61 @@
     
 }
 
--(IBAction)switchDisplay:(UIButton *)sender{
+-(IBAction)switchDisplay:(UITapGestureRecognizer *)sender{
     
-    //Sender will be switched to gesture recognizing sliders to be placed on each DataDisplay
-    
-    switch (sender.tag) {
+    //Switch displayed data
+    switch (sender.view.tag) {
         case 1:
-            if(displayOne.displayState == 4)
-                displayOne.displayState = 0;
+            if(dDisplay.displayState)
+                dDisplay.displayState = FALSE;
             else
-                displayOne.displayState += 1;
+                dDisplay.displayState = TRUE;
             break;
         case 2:
-            if(displayTwo.displayState == 4)
-                displayTwo.displayState = 0;
+            if(sDisplay.displayState)
+                sDisplay.displayState = FALSE;
             else
-                displayTwo.displayState += 1;
+                sDisplay.displayState = TRUE;
+            break;
+        case 3:
+            if(tDisplay.displayState)
+                tDisplay.displayState = FALSE;
+            else
+                tDisplay.displayState = TRUE;
             break;
         
     }
     
-    
-    
+    //Update view
+    [self updateDataWithTimer:nil];
 
 }
 
 -(void) updateDataWithTimer:(NSTimer *) myTimer{
     
-    DataDisplay *display = myTimer.userInfo;
+    //Speed Display Data and Draw Update
+    if(sDisplay.displayState)
+        sDisplay.speedData = currentRide.currentSpeed;
+    else
+        sDisplay.speedData = [currentRide calcAverageSpeed];
     
-    switch(display.displayState){
-        case 0: //Currently used as test case for accelerate, will change.
-            display.rideData = currentRide.idleTime;
-            break;
-        case 1: //Currently used as test case for accelerate, will change.
-            display.rideData = currentRide.didAccelerate;
-            break;
-        case 2:
-            display.rideData = currentRide.timeElapsed;
-            break;
-        case 3:
-            display.rideData = currentRide.distanceCovered;
-            break;
-        case 4:
-            break;
-    }
-    [display setNeedsDisplay];
-    return;
+    [sDisplay setNeedsDisplay];
     
+    //Distance Display Data and Draw Update
+    if(dDisplay.displayState)
+        dDisplay.distanceData = currentRide.distanceCovered;
+    else
+        dDisplay.distanceData = currentRide.altitudeGain;
+    
+    [dDisplay setNeedsDisplay];
+    
+}
+
+-(void) updateTimeWithTimer:(NSTimer *)myTimer{
+    
+    if(tDisplay.displayState)
+        tDisplay.timeData = [currentRide timeElapsed];
+    [tDisplay setNeedsDisplay];
 }
 
 
@@ -123,9 +130,6 @@
 
 }
 
-- (IBAction)testViews{
-    NSLog(@"ViewOne Height:%f, Width: %f, Origin: %f,%f", displayOne.bounds.size.height, displayOne.bounds.size.width, displayOne.bounds.origin.x, displayOne.bounds.origin.y);
-    
-}
+
 
 @end
