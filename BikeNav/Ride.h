@@ -15,26 +15,29 @@
 
 //Display properties
 @property double distanceCovered;
-@property NSDate *startTime;
-@property double idleTime;
 @property double currentSpeed;
-@property double currentLocation;
 @property double altitudeGain;
+@property double timeElapsed;
+@property double averageSpeed;
+
+//Calculation data
+@property NSDate *startTime;
+@property NSDate *timeInterval;
 
 //Acceleromter properties
 @property int __block didAccelerate;
 @property int __block accelCount;
 @property double __block accelSum;
 
+//Update display property methods
 
-//GPS properties
+- (double) updateDistanceCoveredWithDistance: (double) distance;
+- (NSTimeInterval) updateTimeElapsed;
+- (double) calcCurrentSpeedwithDistance: (double) distance overTime: (NSTimeInterval) time;
+- (NSInteger) calculateAltitudeGained;
 
-
-//Methods
--(id)init;
--(double) calcAverageSpeed;
--(NSTimeInterval) timeElapsed;
--(NSTimeInterval)calcIdleTime;
--(double) calcCurrentSpeedwithDistance: (double) distance overTime: (NSTimeInterval) time;
+//Control methods
+- (void) pauseRideUpdates;
+- (void) continueRideUpdates;
 
 @end

@@ -13,8 +13,10 @@
 
 @implementation Ride 
 
-@synthesize distanceCovered, startTime, idleTime;
-@synthesize didAccelerate, accelCount, accelSum;
+@synthesize timeInterval, startTime, timeElapsed;
+@synthesize distanceCovered, altitudeGain, currentSpeed, averageSpeed;
+
+@synthesize accelCount, accelSum, didAccelerate;
 
 
 -(id)init{
@@ -88,9 +90,24 @@
     return distance/time*(M_S_TO_MI_HR);
 }
 
+-(void) continueRideUpdates{
+    
+}
+
+-(void) pauseRideUpdates{
+    
+    //Update timer and end interval
+    timeElapsed -= [timeInterval timeIntervalSinceNow];
+    
+    //Stop distance updates
+    
+    //Set speed = 0 ----- optional: can keep speed going but not record a max during this time
+    currentSpeed = 0.0;
+}
                      
 -(NSTimeInterval)timeElapsed{
-    return [startTime timeIntervalSinceNow] - idleTime;
+    
+    return timeElapsed - [timeInterval timeIntervalSinceNow];
 }
 
 @end
