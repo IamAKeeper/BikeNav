@@ -21,6 +21,8 @@
 @property (nonatomic, retain) IBOutlet SpeedDisplay *sDisplay;
 @property (nonatomic, retain) IBOutlet TimeDisplay *tDisplay;
 
+@property IBOutlet UILabel *nameLabel;
+
 //Associated property of the current Ride and User
 @property Ride *currentRide;
 @property (strong, nonatomic) User *theUser;
@@ -33,6 +35,10 @@
 
 -(void) updateDataWithTimer: (NSTimer *) myTimer;
 -(void) updateTimeWithTimer: (NSTimer *) myTimer;
+
 -(void) beginNewRide;
+-(void) continueRide;
+-(void) pauseRide;
+-(void) endCurrentRide;
 
 @end

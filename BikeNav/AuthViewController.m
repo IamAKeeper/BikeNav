@@ -77,7 +77,7 @@
         
         HomeViewController* homeView = [[HomeViewController alloc] init];
         TabBarController* tbc = [segue destinationViewController];
-        homeView = (HomeViewController *)[[tbc customizableViewControllers] objectAtIndex:0];
+        homeView = (HomeViewController *)[[tbc viewControllers] objectAtIndex:0];
         
         homeView.theUser = theUser;
         

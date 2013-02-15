@@ -29,6 +29,7 @@
     if (self = [super init]){
         userName = name;
         userEmail = email;
+        userRide = nil;
     }
     return self;
 }

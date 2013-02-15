@@ -17,6 +17,7 @@
 @synthesize dDisplay, sDisplay, tDisplay;
 @synthesize theUser, currentRide;
 @synthesize locationManager, lastLocation;
+@synthesize nameLabel;
 
 
 - (void)viewDidLoad
@@ -28,6 +29,10 @@
     NSTimer *timerTwo = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateTimeWithTimer:) userInfo:nil repeats:YES];
     
 	// Do any additional setup after loading the view, typically from a nib.4
+}
+
+- (void) viewWillAppear:(BOOL)animated{
+    nameLabel.text = theUser.userName;
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,6 +59,14 @@
     
 }
 
+- (void) pauseRide{
+    
+}
+
+- (void) continueRide{
+    
+}
+
 -(void) endCurrentRide
 {
     
@@ -74,6 +87,7 @@
                                      timeIntervalSinceDate:[lastLocation timestamp]];
     
     //update User's Ride data
+    
     currentRide.idleTime = timeDifference;
     currentRide.distanceCovered += distanceDifference;
     [currentRide calcCurrentSpeedwithDistance: distanceDifference overTime:timeDifference];

@@ -101,10 +101,16 @@
                                     <outletCollection property="gestureRecognizers" destination="CKG-lA-Ow9" appends="YES" id="R2u-C4-B7A"/>
                                 </connections>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="La5-O5-A9a">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HDv-NR-3Gn" firstAttribute="trailing" secondItem="v7E-Vv-43w" secondAttribute="trailing" type="default" id="0AM-ZB-gwy"/>
+                            <constraint firstAttribute="bottom" secondItem="La5-O5-A9a" secondAttribute="bottom" constant="45" id="3G7-80-94o"/>
                             <constraint firstItem="HDv-NR-3Gn" firstAttribute="centerX" secondItem="wpo-a1-klL" secondAttribute="centerX" type="default" id="BAy-so-EIO"/>
                             <constraint firstItem="wpo-a1-klL" firstAttribute="leading" secondItem="v7E-Vv-43w" secondAttribute="leading" type="default" id="G7q-Dv-pAD"/>
                             <constraint firstAttribute="bottom" secondItem="wpo-a1-klL" secondAttribute="bottom" constant="101" id="Hmy-aZ-KmE"/>
@@ -114,6 +120,7 @@
                             <constraint firstAttribute="bottom" secondItem="wrp-ah-zGa" secondAttribute="bottom" constant="232" id="YkT-GT-m7q"/>
                             <constraint firstItem="wrp-ah-zGa" firstAttribute="leading" secondItem="v7E-Vv-43w" secondAttribute="leading" type="default" id="c3N-FM-H92"/>
                             <constraint firstItem="wrp-ah-zGa" firstAttribute="bottom" secondItem="HDv-NR-3Gn" secondAttribute="bottom" type="default" id="doT-dG-5ih"/>
+                            <constraint firstItem="La5-O5-A9a" firstAttribute="leading" secondItem="v7E-Vv-43w" secondAttribute="leading" constant="151" id="oIc-xz-95W"/>
                             <constraint firstItem="HDv-NR-3Gn" firstAttribute="top" secondItem="v7E-Vv-43w" secondAttribute="top" type="default" id="oJk-lG-AZI"/>
                             <constraint firstItem="HDv-NR-3Gn" firstAttribute="width" secondItem="wrp-ah-zGa" secondAttribute="width" type="user" id="qzj-e4-kf7"/>
                         </constraints>
@@ -124,6 +131,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="dDisplay" destination="wrp-ah-zGa" id="NmM-JN-jyB"/>
+                        <outlet property="nameLabel" destination="La5-O5-A9a" id="dTh-uz-DJE"/>
                         <outlet property="sDisplay" destination="HDv-NR-3Gn" id="WJE-qd-2dm"/>
                         <outlet property="tDisplay" destination="wpo-a1-klL" id="a8E-86-4u0"/>
                     </connections>
@@ -173,8 +181,8 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="AB8-qL-xZ8">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="txI-Kc-oEO">
-                            <rect key="frame" x="96" y="7" width="128" height="31"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" id="txI-Kc-oEO">
+                            <rect key="frame" x="18" y="6" width="284" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="First"/>
@@ -208,22 +216,108 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uWL-DL-hdb" customClass="TimeDisplay">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ru7-7S-O5R">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="Sff-G8-CcP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN0-w2-ETF">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poY-tu-bfc">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeTime" destination="Z0p-C2-q8Z" eventType="touchUpInside" id="hEF-Lf-yiU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="uWL-DL-hdb" secondAttribute="bottom" constant="155" id="3e9-nF-DgM"/>
+                            <constraint firstAttribute="bottom" secondItem="poY-tu-bfc" secondAttribute="bottom" constant="47" id="5fc-2h-5FX"/>
                             <constraint firstItem="uWL-DL-hdb" firstAttribute="top" secondItem="36P-aA-TSy" secondAttribute="top" constant="137" id="738-pb-wbY"/>
+                            <constraint firstItem="poY-tu-bfc" firstAttribute="leading" secondItem="36P-aA-TSy" secondAttribute="leading" constant="46" id="AQ3-EZ-gOw"/>
+                            <constraint firstAttribute="trailing" secondItem="YN0-w2-ETF" secondAttribute="trailing" constant="78" id="EhL-kt-INX"/>
+                            <constraint firstItem="YN0-w2-ETF" firstAttribute="top" secondItem="poY-tu-bfc" secondAttribute="top" type="default" id="TAi-8S-pwQ"/>
                             <constraint firstItem="uWL-DL-hdb" firstAttribute="trailing" secondItem="36P-aA-TSy" secondAttribute="trailing" type="default" id="Tqu-5m-fP0"/>
+                            <constraint firstItem="ru7-7S-O5R" firstAttribute="top" secondItem="36P-aA-TSy" secondAttribute="top" constant="73" id="fcE-bU-IxZ"/>
                             <constraint firstItem="uWL-DL-hdb" firstAttribute="leading" secondItem="36P-aA-TSy" secondAttribute="leading" type="default" id="y8r-R4-wPT"/>
+                            <constraint firstItem="ru7-7S-O5R" firstAttribute="centerX" secondItem="uWL-DL-hdb" secondAttribute="centerX" type="default" id="zoZ-1P-ekH"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="AmE-MQ-Jtc"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="ru7-7S-O5R" id="gI2-Xw-d1L"/>
+                        <outlet property="nameLabel" destination="YN0-w2-ETF" id="tsU-XY-DH1"/>
+                        <outlet property="tDisplay" destination="uWL-DL-hdb" id="gDy-Yd-0Xo"/>
+                        <outlet property="timeChange" destination="poY-tu-bfc" id="jnf-BW-TNI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9kr-85-QVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="228" y="304"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AuthViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AuthViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginUser"/>
+                <relationship kind="outlet" name="emailTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="signInButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="DistanceDisplay" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DistanceDisplay.h"/>
+        </class>
+        <class className="HomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="switchDisplay:" candidateClass="UITapGestureRecognizer"/>
+                <relationship kind="outlet" name="dDisplay" candidateClass="DistanceDisplay"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sDisplay" candidateClass="SpeedDisplay"/>
+                <relationship kind="outlet" name="tDisplay" candidateClass="TimeDisplay"/>
+            </relationships>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changeTime"/>
+                <relationship kind="outlet" name="emailTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tDisplay" candidateClass="TimeDisplay"/>
+                <relationship kind="outlet" name="timeChange" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SpeedDisplay" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SpeedDisplay.h"/>
+        </class>
+        <class className="TabBarController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TabBarController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="segmentedControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="TimeDisplay" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimeDisplay.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

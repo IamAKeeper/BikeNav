@@ -54,14 +54,30 @@
 
 -(void) segmentAction: (UISegmentedControl *) segController
 {
+    HomeViewController *homeView = (HomeViewController *)[[self viewControllers] objectAtIndex:0];
     // Update the label with the segment number
     if(segController.selectedSegmentIndex == 0)
     {
-        [segController setTitle:@"Pause" forSegmentAtIndex:0];
-        HomeViewController *homeView = (HomeViewController *)[[self viewControllers] objectAtIndex:0];
-        [homeView beginNewRide];
+        if(segController.numberOfSegments == 2)
+        {
+            [segController insertSegmentWithTitle:@"Pause" atIndex:1 animated:YES];
+            [segController setTitle:@"Continue" forSegmentAtIndex:0];
+            [homeView beginNewRide];
+        }
+        else{
+            [homeView continueRide];
+        }
+            
     }
-    
+    else if(segController.selectedSegmentIndex == 1){
+        
+        [homeView pauseRide];
+        }
+        else{
+            [homeView endCurrentRide];
+            [segController removeSegmentAtIndex:1 animated:YES];
+            [segController setTitle:@"Start" forSegmentAtIndex:0];
+        }
 }
 
 

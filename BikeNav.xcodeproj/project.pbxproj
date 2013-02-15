@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		70837F9650674AD3BC654E82 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCFA2D0626446C4B99054E0 /* libPods.a */; };
 		D25E67EC16BB5CEF00100FEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25E67EB16BB5CEF00100FEA /* UIKit.framework */; };
 		D25E67EE16BB5CEF00100FEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25E67ED16BB5CEF00100FEA /* Foundation.framework */; };
 		D25E67F016BB5CEF00100FEA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25E67EF16BB5CEF00100FEA /* CoreGraphics.framework */; };
@@ -36,8 +35,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B6E80EDFB5D544AE8CFAD246 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		BDCFA2D0626446C4B99054E0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25E67E716BB5CEF00100FEA /* BikeNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25E67EB16BB5CEF00100FEA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D25E67ED16BB5CEF00100FEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,7 +89,6 @@
 				D25E67EC16BB5CEF00100FEA /* UIKit.framework in Frameworks */,
 				D25E67EE16BB5CEF00100FEA /* Foundation.framework in Frameworks */,
 				D25E67F016BB5CEF00100FEA /* CoreGraphics.framework in Frameworks */,
-				70837F9650674AD3BC654E82 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +101,6 @@
 				D25E67F116BB5CEF00100FEA /* BikeNav */,
 				D25E67EA16BB5CEF00100FEA /* Frameworks */,
 				D25E67E816BB5CEF00100FEA /* Products */,
-				B6E80EDFB5D544AE8CFAD246 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,7 +122,6 @@
 				D25E67EB16BB5CEF00100FEA /* UIKit.framework */,
 				D25E67ED16BB5CEF00100FEA /* Foundation.framework */,
 				D25E67EF16BB5CEF00100FEA /* CoreGraphics.framework */,
-				BDCFA2D0626446C4B99054E0 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -254,7 +248,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -353,7 +348,6 @@
 		};
 		D25E680C16BB5CEF00100FEA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6E80EDFB5D544AE8CFAD246 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BikeNav/BikeNav-Prefix.pch";
@@ -365,7 +359,6 @@
 		};
 		D25E680D16BB5CEF00100FEA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6E80EDFB5D544AE8CFAD246 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BikeNav/BikeNav-Prefix.pch";
