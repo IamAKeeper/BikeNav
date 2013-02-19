@@ -15,4 +15,5 @@
 @property (strong, nonatomic) User *theUser;
 @property IBOutlet UISegmentedControl *segmentedControl;
 
+
 @end

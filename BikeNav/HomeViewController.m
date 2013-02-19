@@ -24,9 +24,19 @@
 {
     [super viewDidLoad];
     
+    [currentRide pauseRideUpdates];
+    
     NSLog(@"ViewDidLoad");
     
     NSTimer *timerTwo = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateTimeWithTimer:) userInfo:nil repeats:YES];
+    
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    locationManager.distanceFilter = 1;
+    locationManager.activityType = CLActivityTypeFitness;
+    [locationManager startUpdatingLocation];
+    lastLocation = nil;
     
 	// Do any additional setup after loading the view, typically from a nib.4
 }
@@ -43,32 +53,34 @@
 
 - (void) beginNewRide
 {
-    theUser.userRide = [[Ride alloc] init];
-    
-    currentRide = theUser.userRide;
+    NSLog(@"begun");
+    currentRide = [[Ride alloc] init];
     
     NSTimer *timerOne = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(updateDataWithTimer:) userInfo:nil repeats:YES];
     
-    locationManager = [[CLLocationManager alloc] init];
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    locationManager.distanceFilter = 1;
-    locationManager.activityType = CLActivityTypeFitness;
-    [locationManager startUpdatingLocation];
-    lastLocation = nil;
-    
+    NSLog(@"The user is : %@", theUser.userName);
+
 }
 
+//Following pause/continue methods are likely unneccessary. Can directly call method of Ride in the tabbarcontroller
+
 - (void) pauseRide{
-    
+    NSLog(@"paused");
+    [currentRide pauseRideUpdates];
 }
 
 - (void) continueRide{
-    
+    NSLog(@"continued");
+    [currentRide continueRideUpdates];
 }
 
 -(void) endCurrentRide
 {
+    NSLog(@"ended");
+    //In future, this will need to store the currentRide information into User's history before reallocating
+    /*Do not realloc here, or set back to defaults. Do that on BeginNewRide. User should still be able to see data from finished ride without going to history */
+    //temporary fix. don't want to directly set pause if we can help it -- should pauseRideUpdates end as well?
+    [currentRide pauseRideUpdates];
     
 }
 
@@ -88,8 +100,7 @@
     
     //update User's Ride data
     
-    currentRide.idleTime = timeDifference;
-    currentRide.distanceCovered += distanceDifference;
+    [currentRide updateDistanceCoveredWithDistance: distanceDifference];
     [currentRide calcCurrentSpeedwithDistance: distanceDifference overTime:timeDifference];
     
     lastLocation = newLocation;
@@ -132,7 +143,7 @@
     if(sDisplay.displayState)
         sDisplay.speedData = currentRide.currentSpeed;
     else
-        sDisplay.speedData = [currentRide calcAverageSpeed];
+        sDisplay.speedData = [currentRide averageSpeed];
     
     [sDisplay setNeedsDisplay];
     
@@ -149,7 +160,7 @@
 -(void) updateTimeWithTimer:(NSTimer *)myTimer{
     
     if(tDisplay.displayState)
-        tDisplay.timeData = [currentRide timeElapsed];
+        tDisplay.timeData = [currentRide updateTimeElapsed];
     [tDisplay setNeedsDisplay];
 }
 

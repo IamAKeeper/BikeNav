@@ -21,6 +21,7 @@
 @property (nonatomic, retain) IBOutlet SpeedDisplay *sDisplay;
 @property (nonatomic, retain) IBOutlet TimeDisplay *tDisplay;
 
+
 @property IBOutlet UILabel *nameLabel;
 
 //Associated property of the current Ride and User

@@ -80,6 +80,7 @@
         homeView = (HomeViewController *)[[tbc viewControllers] objectAtIndex:0];
         
         homeView.theUser = theUser;
+        homeView.currentRide = theUser.userRide;
         
     }
 }

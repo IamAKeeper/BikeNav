@@ -182,12 +182,15 @@
                     <navigationItem key="navigationItem" id="AB8-qL-xZ8">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" id="txI-Kc-oEO">
-                            <rect key="frame" x="18" y="6" width="284" height="32"/>
+                            <rect key="frame" x="18" y="7" width="284" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="First"/>
-                                <segment title="Second"/>
+                                <segment title="Start"/>
+                                <segment title="End"/>
                             </segments>
+                            <connections>
+                                <action selector="segmentAction:" destination="kQi-Na-SSz" eventType="valueChanged" id="83R-t2-alg"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -311,6 +314,7 @@
         <class className="TabBarController" superclassName="UITabBarController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TabBarController.h"/>
             <relationships>
+                <relationship kind="action" name="segmentAction:" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="segmentedControl" candidateClass="UISegmentedControl"/>
             </relationships>
         </class>

@@ -28,7 +28,7 @@
     
     NSLog(@"view will appear");
     
-    nameLabel.text = [NSString stringWithFormat:@"%f",[theUser.userRide timeElapsed]];
+    nameLabel.text = [NSString stringWithFormat:@"%f",[theUser.userRide updateTimeElapsed]];
     
 }
 

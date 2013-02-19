@@ -24,6 +24,8 @@
 @property NSDate *startTime;
 @property NSDate *timeInterval;
 
+@property BOOL paused;
+
 //Acceleromter properties
 @property int __block didAccelerate;
 @property int __block accelCount;

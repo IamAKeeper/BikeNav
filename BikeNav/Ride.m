@@ -15,7 +15,7 @@
 
 @synthesize timeInterval, startTime, timeElapsed;
 @synthesize distanceCovered, altitudeGain, currentSpeed, averageSpeed;
-
+@synthesize paused;
 @synthesize accelCount, accelSum, didAccelerate;
 
 
@@ -23,6 +23,7 @@
     if(self = [super init])
     {
         startTime = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
+        timeInterval = startTime;
         accelCount = 0;
     }
     
@@ -81,33 +82,46 @@
 
 }
 
--(double) calcAverageSpeed{
-    //return distanceCovered/[self timeElapsed];
-    return 5.0;
-}
-
--(double) calcCurrentSpeedwithDistance: (double) distance overTime: (NSTimeInterval) time{
-    return distance/time*(M_S_TO_MI_HR);
-}
-
 -(void) continueRideUpdates{
-    
+    paused = NO;
+    timeInterval = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
 }
 
 -(void) pauseRideUpdates{
     
-    //Update timer and end interval
-    timeElapsed -= [timeInterval timeIntervalSinceNow];
+    if(paused)
+        return;
+    else{
+        paused = YES;
+        //Update timer and end interval
+        timeElapsed += [timeInterval timeIntervalSinceNow];
+    }
+
+}
+
+- (double) updateDistanceCoveredWithDistance:(double)distance{
     
-    //Stop distance updates
+    if(!paused)
+        distanceCovered += distance;
+    return distanceCovered;
     
-    //Set speed = 0 ----- optional: can keep speed going but not record a max during this time
-    currentSpeed = 0.0;
 }
                      
--(NSTimeInterval)timeElapsed{
+-(NSTimeInterval)updateTimeElapsed{
     
-    return timeElapsed - [timeInterval timeIntervalSinceNow];
+    if(paused)
+        return timeElapsed;
+    
+    return timeElapsed + [timeInterval timeIntervalSinceNow];
+}
+
+-(double) calcAverageSpeed{
+    
+    return distanceCovered / -1*[self updateTimeElapsed];
+}
+
+-(double) calcCurrentSpeedwithDistance: (double) distance overTime: (NSTimeInterval) time{
+    return distance/time*(M_S_TO_MI_HR);
 }
 
 @end
