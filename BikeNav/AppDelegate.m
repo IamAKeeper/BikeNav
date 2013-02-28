@@ -21,6 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Create a location manager instance to determine if location services are enabled. This manager instance will be
+    [GMSServices provideAPIKey:@"AIzaSyDDTyCPGiQq-wVvYE1yahbcP7j77osfpog"];
     // immediately released afterwards.
     return YES;
 }

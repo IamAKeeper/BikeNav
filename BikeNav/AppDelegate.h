@@ -19,6 +19,7 @@
 // If using Core Data, you may also wish to append
 #import <CoreData/CoreData.h>
 #import <CoreMotion/CoreMotion.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

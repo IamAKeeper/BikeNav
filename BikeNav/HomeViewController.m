@@ -35,6 +35,7 @@
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     locationManager.distanceFilter = 1;
     locationManager.activityType = CLActivityTypeFitness;
+    locationManager.pausesLocationUpdatesAutomatically = YES;
     [locationManager startUpdatingLocation];
     lastLocation = nil;
     
@@ -90,11 +91,16 @@
     if (lastLocation == nil)
         lastLocation = [locations lastObject];
     
+    //Custom determining to stopUpdateLocation based on time elapsed since last update. - the user is likely to have stopped. Call [currentRide pauseRide], will need to turn off pauseupdatesuato
+    
     //Location Change
     CLLocation *newLocation = [locations lastObject];
     
     CLLocationDistance distanceDifference = [newLocation
                                      distanceFromLocation:lastLocation];
+    
+    NSInteger altitudeDifference = newLocation.altitude - lastLocation.altitude;
+    
     NSTimeInterval timeDifference = [[newLocation timestamp]
                                      timeIntervalSinceDate:[lastLocation timestamp]];
     
@@ -102,6 +108,7 @@
     
     [currentRide updateDistanceCoveredWithDistance: distanceDifference];
     [currentRide calcCurrentSpeedwithDistance: distanceDifference overTime:timeDifference];
+    [currentRide calculateAltitudeGainedWithDistance: altitudeDifference];
     
     lastLocation = newLocation;
     

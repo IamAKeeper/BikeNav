@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 #import "TimeDisplay.h"
+#import "AppDelegate.h"
 
 @interface MapViewController : UIViewController <UITextFieldDelegate>
 

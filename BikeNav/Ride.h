@@ -36,7 +36,7 @@
 - (double) updateDistanceCoveredWithDistance: (double) distance;
 - (NSTimeInterval) updateTimeElapsed;
 - (double) calcCurrentSpeedwithDistance: (double) distance overTime: (NSTimeInterval) time;
-- (NSInteger) calculateAltitudeGained;
+- (NSInteger) calculateAltitudeGainedWithDistance: (NSInteger) altitudeDifference;
 
 //Control methods
 - (void) pauseRideUpdates;

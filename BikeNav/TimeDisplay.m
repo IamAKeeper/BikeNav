@@ -50,7 +50,7 @@
 - (char *)formattedTimeDuration
 {
     double duration = timeData*-1;
-    NSInteger hours = floor(duration/320);
+    NSInteger hours = floor(duration/3200);
     NSInteger minutes = floor(duration/60);
     double seconds = duration - (minutes * 60);
     return [[NSString stringWithFormat:@"%02d:%02d:%04.1f", hours, minutes, seconds] UTF8String];

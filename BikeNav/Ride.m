@@ -106,6 +106,14 @@
     return distanceCovered;
     
 }
+
+- (NSInteger) calculateAltitudeGainedWithDistance:(NSInteger)altitudeDifference
+{
+    if(altitudeDifference > 0 && paused == NO)
+        altitudeGain += altitudeDifference;
+    
+    return altitudeGain;
+}
                      
 -(NSTimeInterval)updateTimeElapsed{
     
@@ -121,7 +129,7 @@
 }
 
 -(double) calcCurrentSpeedwithDistance: (double) distance overTime: (NSTimeInterval) time{
-    return distance/time*(M_S_TO_MI_HR);
+    currentSpeed = distance/time*(M_S_TO_MI_HR);
 }
 
 @end

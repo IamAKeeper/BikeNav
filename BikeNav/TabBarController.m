@@ -26,7 +26,13 @@
     return self;
 }
 
-
+- (void) viewWillAppear:(BOOL)animated{
+    
+    //Tab Bar customizing!
+    [self.tabBar setTintColor: [UIColor colorWithRed:244/255.0f green:133/255.0f blue:50/255.0f alpha:1.0f]];
+    [self.tabBar setSelectedImageTintColor: [UIColor colorWithRed:49/255.0f green:187/255.0f blue:245/255.0f alpha:1.0f]];
+}
+     
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -44,6 +50,9 @@
     // Add it to the navigation bar
     
     //Generate custom colors! Also, need to add color for pause
+    
+
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.05 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [[segmentedControl.subviews objectAtIndex:0] setTintColor:[UIColor redColor]];
          [[segmentedControl.subviews objectAtIndex:1] setTintColor:[UIColor greenColor]];;
