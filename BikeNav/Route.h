@@ -10,11 +10,21 @@
 #import <MapKit/MapKit.h>
 
 @interface Route : NSObject <MKOverlay>
+{
+    MKMapPoint *points;
+    NSUInteger pointCount;
+    NSUInteger pointSpace;
+    
+    MKMapRect boundingMapRect;
+}
 
-@property CLLocationCoordinate2D point;
-@property (nonatomic) MKMapRect boundingMapRect;
+@property (readonly) MKMapPoint *points;
+@property (readonly) NSUInteger pointCount;
 
-- (id) initWithCenterCoordinate:(CLLocationCoordinate2D) aCoord rect:(MKMapRect) boundingRect;
+- (id) initWithCenterCoordinate:(CLLocationCoordinate2D) coord;
+
+- (MKMapRect) addCoordinate:(CLLocationCoordinate2D) coord;
+
 
 
 @end

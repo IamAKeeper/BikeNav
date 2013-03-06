@@ -71,6 +71,8 @@
 {
     
     HomeViewController *homeView = (HomeViewController *)[[self viewControllers] objectAtIndex:0];
+    
+    
     // Update the label with the segment number
     if(segController.selectedSegmentIndex == 0)
     {

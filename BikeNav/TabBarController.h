@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 #import "HomeViewController.h"
+#import "MapKitViewController.h"
 
 @interface TabBarController : UITabBarController
 

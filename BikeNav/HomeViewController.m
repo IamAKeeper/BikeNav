@@ -28,6 +28,10 @@
     
     NSLog(@"ViewDidLoad");
     
+    _mapView = (MapKitViewController *)[[self.tabBarController viewControllers] objectAtIndex: 1];
+    
+    [_mapView setUpLocationManager];
+    
     NSTimer *timerTwo = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateTimeWithTimer:) userInfo:nil repeats:YES];
     
     locationManager = [[CLLocationManager alloc] init];

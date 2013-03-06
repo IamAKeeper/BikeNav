@@ -11,6 +11,7 @@
 #import "SpeedDisplay.h"
 #import "TimeDisplay.h"
 #import <CoreLocation/CoreLocation.h>
+#import "MapKitViewController.h"
 
 #include "User.h"
 
@@ -20,6 +21,9 @@
 @property (nonatomic, retain) IBOutlet DistanceDisplay *dDisplay;
 @property (nonatomic, retain) IBOutlet SpeedDisplay *sDisplay;
 @property (nonatomic, retain) IBOutlet TimeDisplay *tDisplay;
+
+//The mapkit view
+@property (strong, nonatomic) MapKitViewController *mapView;
 
 
 @property IBOutlet UILabel *nameLabel;

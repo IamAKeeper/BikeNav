@@ -280,8 +280,8 @@
                     </tabBar>
                     <connections>
                         <outlet property="segmentedControl" destination="txI-Kc-oEO" id="A8F-JY-PWK"/>
-                        <segue destination="xoO-jR-t7b" kind="relationship" relationship="viewControllers" id="Anv-gO-dZU"/>
-                        <segue destination="oNm-mo-Qqa" kind="relationship" relationship="viewControllers" id="Ojc-B1-8fH"/>
+                        <segue destination="xoO-jR-t7b" kind="relationship" relationship="viewControllers" id="C6P-mk-NJa"/>
+                        <segue destination="oNm-mo-Qqa" kind="relationship" relationship="viewControllers" id="LkK-uz-1GK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UNt-Fj-hrx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -297,10 +297,29 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C9E-WV-KBM"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKR-vo-IIO">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="41" id="HmW-da-XUN"/>
+                                    <constraint firstAttribute="height" constant="41" id="Ni0-Bk-i0L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setTracking" destination="oNm-mo-Qqa" eventType="touchUpInside" id="MVd-06-xGz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="QKR-vo-IIO" firstAttribute="leading" secondItem="ClX-9A-n0z" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Yct-q2-GOL"/>
                             <constraint firstItem="C9E-WV-KBM" firstAttribute="trailing" secondItem="ClX-9A-n0z" secondAttribute="trailing" type="default" id="aPZ-Bj-Muf"/>
+                            <constraint firstAttribute="bottom" secondItem="QKR-vo-IIO" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="crj-NZ-DdA"/>
                             <constraint firstItem="C9E-WV-KBM" firstAttribute="leading" secondItem="ClX-9A-n0z" secondAttribute="leading" type="default" id="g7n-Qq-9fQ"/>
                             <constraint firstItem="C9E-WV-KBM" firstAttribute="bottom" secondItem="ClX-9A-n0z" secondAttribute="bottom" type="default" id="lgB-AL-HoM"/>
                             <constraint firstItem="C9E-WV-KBM" firstAttribute="top" secondItem="ClX-9A-n0z" secondAttribute="top" type="default" id="qkP-84-sPd"/>
@@ -308,6 +327,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" id="jX4-E4-DPD"/>
                     <connections>
+                        <outlet property="followButton" destination="QKR-vo-IIO" id="Pdw-fN-gcQ"/>
                         <outlet property="mapView" destination="C9E-WV-KBM" id="tMR-cx-DqZ"/>
                     </connections>
                 </viewController>
@@ -342,6 +362,7 @@
         <class className="MapKitViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MapKitViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="followButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
         </class>
@@ -364,6 +385,7 @@
         <class className="TabBarController" superclassName="UITabBarController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TabBarController.h"/>
             <relationships>
+                <relationship kind="action" name="segmentAction:" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="segmentedControl" candidateClass="UISegmentedControl"/>
             </relationships>
         </class>

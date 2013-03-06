@@ -10,8 +10,10 @@
 
 @interface RouteView : MKOverlayView
 
-@property (strong, nonatomic) NSMutableArray *routePoints;
+- (CGPathRef) newPathForPoints: (MKMapPoint *) points
+                    pointCount: (NSUInteger) pointCount
+                      clipRect: (MKMapRect) mapRect
+                     zoomScale: (MKZoomScale) zoomScale;
 
-- (id) initWithOverlayAndPoints:(id<MKOverlay>) overlay points:(NSMutableArray *) points;
 
 @end

@@ -16,7 +16,7 @@
 
 @implementation MapKitViewController
 
-@synthesize mapView, routePoints;
+@synthesize mapView, locationManager, aRoute, aRouteView, lastLocation;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,8 +39,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSLog(@"Map viewdidload");
+    
+    [self setUpLocationManager];
+    
     mapView.delegate = self;
-    routePoints = [[NSMutableArray alloc] init];
+    [mapView setUserTrackingMode:MKUserTrackingModeFollow];
     
 	// Do any additional setup after loading the view.
 }
@@ -53,7 +58,8 @@
 
 - (void) mapView:(MKMapView *)aMapView didUpdateUserLocation:(MKUserLocation *)aUserLocation
 {
-    
+
+   /*
     CLLocationCoordinate2D currentLocation = [aMapView.userLocation.location coordinate];
     
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(currentLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
@@ -62,65 +68,90 @@
     
     [aMapView setCenterCoordinate:currentLocation];
     [aMapView setRegion:viewRegion animated:NO];
-    
-    
-    Route *routePoint = [[Route alloc] initWithCenterCoordinate:aMapView.userLocation.location.coordinate rect: viewRect];
-    
-    [routePoints addObject:routePoint];
-    
-    if ([routePoints count] >= 2){
-        
-        NSLog(@"number of points: %d", [routePoints count]);
-        [mapView addOverlay:routePoint];
-        
-    }
+   */ 
     
 }
 
 - (MKOverlayView *) mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay
 {
     
-    if ([overlay isKindOfClass:[Route class]])
+    if (!aRouteView)
     {
         
         NSLog(@"attempting to init routeview");
-        RouteView *aView = [[RouteView alloc] initWithOverlayAndPoints:overlay points:routePoints];
+        aRouteView = [[RouteView alloc] initWithOverlay:overlay];
         
-        return aView;
     }
     
-    return nil;
+    return aRouteView;
 }
 
 - (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    
+    if (locations)
+    {
+        
+        CLLocation *newLocation = [locations lastObject];
+        
+        if (!lastLocation)
+        {
+            lastLocation = newLocation;
+            /*
+            MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
+            
+            MKMapRect viewRect = [self mapRectForCoordinateRegion:viewRegion];
+            
+            [mapView setCenterCoordinate:newLocation.coordinate];
+            [mapView setRegion:viewRegion animated:NO];
+             */
+            return;
+        }
+        
+        if ((lastLocation.coordinate.latitude != newLocation.coordinate.latitude) &&
+                (lastLocation.coordinate.longitude != newLocation.coordinate.latitude))
+        {
+            
+            if (!aRoute)
+            {
+                
+                aRoute = [[Route alloc] initWithCenterCoordinate:newLocation.coordinate];
+                [mapView addOverlay:aRoute];
+                
+            }
+            else
+            {
+                MKMapRect updateRect = [aRoute addCoordinate:newLocation.coordinate];
+                
+                if (!MKMapRectIsNull(updateRect))
+                {
+                    
+                    MKZoomScale currentZoomScale = (CGFloat)(mapView.bounds.size.width / mapView.visibleMapRect.size.width);
+                    CGFloat lineWidth = MKRoadWidthAtZoomScale(currentZoomScale);
+                    updateRect = MKMapRectInset(updateRect, -lineWidth, -lineWidth);
+                    [aRouteView setNeedsDisplayInMapRect:updateRect];
+                    
+                }
+                    
+            }
+            
+        }
+        
+    }
 }
 
-- (MKMapRect)mapRectForCoordinateRegion:(MKCoordinateRegion)coordinateRegion
+- (IBAction) setTracking
 {
-    CLLocationCoordinate2D topLeftCoordinate =
-    CLLocationCoordinate2DMake(coordinateRegion.center.latitude
-                               + (coordinateRegion.span.latitudeDelta/2.0),
-                               coordinateRegion.center.longitude
-                               - (coordinateRegion.span.longitudeDelta/2.0));
+    [mapView setUserTrackingMode:MKUserTrackingModeFollow];
+}
+
+- (void) setUpLocationManager
+{
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
     
-    MKMapPoint topLeftMapPoint = MKMapPointForCoordinate(topLeftCoordinate);
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
-    CLLocationCoordinate2D bottomRightCoordinate =
-    CLLocationCoordinate2DMake(coordinateRegion.center.latitude
-                               - (coordinateRegion.span.latitudeDelta/2.0),
-                               coordinateRegion.center.longitude
-                               + (coordinateRegion.span.longitudeDelta/2.0));
-    
-    MKMapPoint bottomRightMapPoint = MKMapPointForCoordinate(bottomRightCoordinate);
-    
-    MKMapRect mapRect = MKMapRectMake(topLeftMapPoint.x,
-                                      topLeftMapPoint.y,
-                                      fabs(bottomRightMapPoint.x-topLeftMapPoint.x),
-                                      fabs(bottomRightMapPoint.y-topLeftMapPoint.y));
-    
-    return mapRect;
+    [locationManager startUpdatingLocation];
 }
 
 
