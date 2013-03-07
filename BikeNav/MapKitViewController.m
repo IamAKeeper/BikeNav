@@ -16,7 +16,7 @@
 
 @implementation MapKitViewController
 
-@synthesize mapView, locationManager, aRoute, aRouteView, lastLocation;
+@synthesize mapView, locationManager, aRoute, aRouteView, lastLocation, pauseCount;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -72,13 +72,13 @@
     
 }
 
-- (MKOverlayView *) mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay
+- (MKOverlayView *) mapView:(MKMapView *)aMapView viewForOverlay:(id<MKOverlay>)overlay
 {
     
-    if (!aRouteView)
+    if ([aMapView.overlays count] == (pauseCount + 1))
     {
         
-        NSLog(@"attempting to init routeview");
+        NSLog(@"New OverlayView added");
         aRouteView = [[RouteView alloc] initWithOverlay:overlay];
         
     }
@@ -96,14 +96,6 @@
         if (!lastLocation)
         {
             lastLocation = newLocation;
-            /*
-            MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
-            
-            MKMapRect viewRect = [self mapRectForCoordinateRegion:viewRegion];
-            
-            [mapView setCenterCoordinate:newLocation.coordinate];
-            [mapView setRegion:viewRegion animated:NO];
-             */
             return;
         }
         
@@ -111,11 +103,12 @@
                 (lastLocation.coordinate.longitude != newLocation.coordinate.latitude))
         {
             
-            if (!aRoute)
+            if ([mapView.overlays count] == pauseCount)
             {
                 
                 aRoute = [[Route alloc] initWithCenterCoordinate:newLocation.coordinate];
                 [mapView addOverlay:aRoute];
+                NSLog(@"New Overlay added");
                 
             }
             else
@@ -151,8 +144,16 @@
     
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
+    pauseCount = 0;
+    
     [locationManager startUpdatingLocation];
 }
 
+- (void) saveMapandClearOverlay
+{
+    [mapView removeOverlays: mapView.overlays];
+    
+    //for now, just clears overlays. this will save the map into the ride model eventually.
+}
 
 @end

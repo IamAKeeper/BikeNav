@@ -25,6 +25,8 @@
 
 - (MKMapRect) addCoordinate:(CLLocationCoordinate2D) coord;
 
+- (BOOL) wasPaused;
+
 
 
 @end

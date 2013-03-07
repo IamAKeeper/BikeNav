@@ -23,7 +23,11 @@
 
 @property (strong, nonatomic) CLLocation *lastLocation;
 
+
+@property NSInteger pauseCount;
+
 - (void) setUpLocationManager;
+- (void) saveMapandClearOverlay;
 
 
 
