@@ -98,22 +98,6 @@
     }
 
 }
-
-- (double) updateDistanceCoveredWithDistance:(double)distance{
-    
-    if(!paused)
-        distanceCovered += distance;
-    return distanceCovered;
-    
-}
-
-- (NSInteger) calculateAltitudeGainedWithDistance:(NSInteger)altitudeDifference
-{
-    if(altitudeDifference > 0 && paused == NO)
-        altitudeGain += altitudeDifference;
-    
-    return altitudeGain;
-}
                      
 -(NSTimeInterval)updateTimeElapsed{
     
@@ -123,13 +107,19 @@
     return timeElapsed + [timeInterval timeIntervalSinceNow];
 }
 
--(double) calcAverageSpeed{
+- (void) updateRideWithDistance:(double)distance andAltitude:(NSInteger)altitude overTime:(NSTimeInterval)time
+{
+    if(!paused)
+    {
+        distanceCovered += distance;
+        
+        if(altitude > 0)
+            altitudeGain += altitude;        
+    }
     
-    return distanceCovered / -1*[self updateTimeElapsed];
-}
-
--(double) calcCurrentSpeedwithDistance: (double) distance overTime: (NSTimeInterval) time{
     currentSpeed = distance/time*(M_S_TO_MI_HR);
+    averageSpeed = distanceCovered / -1*[self updateTimeElapsed];
+    
 }
 
 @end

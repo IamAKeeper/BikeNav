@@ -23,7 +23,7 @@
 @property (nonatomic, retain) IBOutlet TimeDisplay *tDisplay;
 
 //The mapkit view
-@property (strong, nonatomic) MapKitViewController *mapView;
+@property (strong, nonatomic) MapKitViewController *mapVC;
 
 
 @property IBOutlet UILabel *nameLabel;

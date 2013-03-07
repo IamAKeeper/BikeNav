@@ -31,12 +31,12 @@
 @property int __block accelCount;
 @property double __block accelSum;
 
-//Update display property methods
+//Update Ride data methods
 
-- (double) updateDistanceCoveredWithDistance: (double) distance;
 - (NSTimeInterval) updateTimeElapsed;
-- (double) calcCurrentSpeedwithDistance: (double) distance overTime: (NSTimeInterval) time;
-- (NSInteger) calculateAltitudeGainedWithDistance: (NSInteger) altitudeDifference;
+- (void) updateRideWithDistance: (double) distance
+                    andAltitude: (NSInteger)altitude
+                       overTime: (NSTimeInterval) time;
 
 //Control methods
 - (void) pauseRideUpdates;

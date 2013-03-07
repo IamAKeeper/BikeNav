@@ -28,7 +28,7 @@
     
     NSLog(@"ViewDidLoad");
     
-    self.mapView = (MapKitViewController *)[[self.tabBarController viewControllers] objectAtIndex: 1];
+    self.mapVC = (MapKitViewController *)[[self.tabBarController viewControllers] objectAtIndex: 1];
     
     NSTimer *timerTwo = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateTimeWithTimer:) userInfo:nil repeats:YES];
     
@@ -59,7 +59,7 @@
     NSLog(@"begun");
     currentRide = [[Ride alloc] init];
     
-    [self.mapView setUpLocationManager];
+    [self.mapVC setUpLocationManager];
     
     NSTimer *timerOne = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(updateDataWithTimer:) userInfo:nil repeats:YES];
     
@@ -70,15 +70,15 @@
 - (void) pauseRide{
     NSLog(@"paused");
     [currentRide pauseRideUpdates];
-    [self.mapView.locationManager stopUpdatingLocation];
-    self.mapView.pauseCount++;
+    [self.mapVC.locationManager stopUpdatingLocation];
+    self.mapVC.pauseCount++;
 }
 
 - (void) continueRide{
     NSLog(@"continued");
     [currentRide continueRideUpdates];
-     self.mapView.lastLocation = nil;
-    [self.mapView.locationManager startUpdatingLocation];
+     self.mapVC.lastLocation = nil;
+    [self.mapVC.locationManager startUpdatingLocation];
 }
 
 -(void) endCurrentRide
@@ -87,7 +87,7 @@
     //In future, this will need to store the currentRide information into User's history before reallocating
     /*Do not realloc here, or set back to defaults. Do that on BeginNewRide. User should still be able to see data from finished ride without going to history */
     //temporary fix. don't want to directly set pause if we can help it -- should pauseRideUpdates end as well?
-    [self.mapView saveMapandClearOverlay];
+    [self.mapVC saveMapandClearOverlay];
     [currentRide pauseRideUpdates];
     
 }
@@ -131,9 +131,7 @@
     
     //update User's Ride data
     
-    [currentRide updateDistanceCoveredWithDistance: distanceDifference];
-    [currentRide calcCurrentSpeedwithDistance: distanceDifference overTime:timeDifference];
-    [currentRide calculateAltitudeGainedWithDistance: altitudeDifference];
+    [currentRide updateRideWithDistance:distanceDifference andAltitude:altitudeDifference overTime:timeDifference];
     
     lastLocation = newLocation;
     
