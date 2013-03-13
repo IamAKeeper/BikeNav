@@ -12,6 +12,7 @@
 #import "TimeDisplay.h"
 #import <CoreLocation/CoreLocation.h>
 #import "MapKitViewController.h"
+#import "HomeView.h"
 
 #include "User.h"
 
@@ -24,9 +25,6 @@
 
 //The mapkit view
 @property (strong, nonatomic) MapKitViewController *mapVC;
-
-
-@property IBOutlet UILabel *nameLabel;
 
 //Associated property of the current Ride and User
 @property Ride *currentRide;
@@ -42,8 +40,6 @@
 -(void) updateTimeWithTimer: (NSTimer *) myTimer;
 
 -(void) beginNewRide;
--(void) continueRide;
--(void) pauseRide;
 -(void) endCurrentRide;
 
 @end

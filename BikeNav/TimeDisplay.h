@@ -12,6 +12,7 @@
 
 @property double timeData;
 @property BOOL displayState;
+@property (strong, nonatomic) UIColor *lightBlueColor, *darkBlueColor;
 
 -(void) drawTimeWithText: (char*) timeText andContext: (CGContextRef) myContext andRect: (CGRect) contextRect;
 

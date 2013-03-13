@@ -29,6 +29,9 @@
 - (void) setUpLocationManager;
 - (void) saveMapandClearOverlay;
 
+- (void) beginNewRide;
+- (void) endCurrentRide;
+
 
 
 

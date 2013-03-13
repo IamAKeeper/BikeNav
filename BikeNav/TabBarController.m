@@ -51,6 +51,10 @@
     
     //Generate custom colors! Also, need to add color for pause
     
+    MapKitViewController *homeVC = [[MapKitViewController alloc] init];
+    
+    
+    
 
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.05 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
@@ -70,7 +74,9 @@
 -(IBAction) segmentAction: (UISegmentedControl *) segController
 {
     
-    HomeViewController *homeView = (HomeViewController *)[[self viewControllers] objectAtIndex:0];
+    HomeViewController *homeVC = (HomeViewController *)[[self viewControllers] objectAtIndex:0];
+    NSLog(@"Hey");
+    MapKitViewController *mapVC = (MapKitViewController *)[[self viewControllers] objectAtIndex:1];
     
     
     // Update the label with the segment number
@@ -81,24 +87,33 @@
             NSLog(@"buttons animated");
             [segController insertSegmentWithTitle:@"Pause" atIndex:1 animated:YES];
             [segController setTitle:@"Continue" forSegmentAtIndex:0];
-            [homeView beginNewRide];
+            
+            [homeVC beginNewRide];
+            [mapVC beginNewRide];
+            
         }
         else{
-            [homeView continueRide];
+            mapVC.lastLocation = nil;
+            [mapVC.locationManager startUpdatingLocation];
+            [homeVC.currentRide continueRideUpdates];
         }
             
     }
-    else if(segController.selectedSegmentIndex == 1){
-        [homeView pauseRide];
+    else if(segController.selectedSegmentIndex == 1)
+        {
+            [mapVC.locationManager stopUpdatingLocation];
+            mapVC.pauseCount++;
+            [homeVC.currentRide pauseRideUpdates];
         }
-        else{ //selected segment == 2
-            [homeView endCurrentRide];
-            [segController removeSegmentAtIndex:1 animated:YES];
-            [segController setTitle:@"Start" forSegmentAtIndex:0];
-        }
+        else
+            { //selected segment == 2
+                [homeVC endCurrentRide];
+                [mapVC endCurrentRide];
+                [homeVC.currentRide pauseRideUpdates];
+                [segController removeSegmentAtIndex:1 animated:YES];
+                [segController setTitle:@"Start" forSegmentAtIndex:0];
+            }
 }
-
-
 
 
 @end

@@ -17,7 +17,6 @@
 @synthesize dDisplay, sDisplay, tDisplay;
 @synthesize theUser, currentRide;
 @synthesize locationManager, lastLocation;
-@synthesize nameLabel;
 
 
 - (void)viewDidLoad
@@ -28,9 +27,9 @@
     
     NSLog(@"ViewDidLoad");
     
-    self.mapVC = (MapKitViewController *)[[self.tabBarController viewControllers] objectAtIndex: 1];
-    
     NSTimer *timerTwo = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateTimeWithTimer:) userInfo:nil repeats:YES];
+    
+    NSTimer *timerOne = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(updateDataWithTimer:) userInfo:nil repeats:YES];
     
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
@@ -44,10 +43,6 @@
 	// Do any additional setup after loading the view, typically from a nib.4
 }
 
-- (void) viewWillAppear:(BOOL)animated{
-    nameLabel.text = theUser.userName;
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -56,39 +51,13 @@
 
 - (void) beginNewRide
 {
-    NSLog(@"begun");
     currentRide = [[Ride alloc] init];
-    
-    [self.mapVC setUpLocationManager];
-    
-    NSTimer *timerOne = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(updateDataWithTimer:) userInfo:nil repeats:YES];
-    
-    NSLog(@"The user is : %@", theUser.userName);
-
-}
-
-- (void) pauseRide{
-    NSLog(@"paused");
-    [currentRide pauseRideUpdates];
-    [self.mapVC.locationManager stopUpdatingLocation];
-    self.mapVC.pauseCount++;
-}
-
-- (void) continueRide{
-    NSLog(@"continued");
-    [currentRide continueRideUpdates];
-     self.mapVC.lastLocation = nil;
-    [self.mapVC.locationManager startUpdatingLocation];
 }
 
 -(void) endCurrentRide
 {
     NSLog(@"ended");
-    //In future, this will need to store the currentRide information into User's history before reallocating
-    /*Do not realloc here, or set back to defaults. Do that on BeginNewRide. User should still be able to see data from finished ride without going to history */
-    //temporary fix. don't want to directly set pause if we can help it -- should pauseRideUpdates end as well?
-    [self.mapVC saveMapandClearOverlay];
-    [currentRide pauseRideUpdates];
+    //This space reserved for saving ride information to backend
     
 }
 
@@ -107,8 +76,9 @@
     NSInteger i;
     CLLocation *newLocation;
     
-    for( i = [locations count]; i >= 0; i--)
+    for( i = [locations count] - 1; i >= 0; i--)
     {
+        NSLog(@"%d", [locations count]);
         if(((CLLocation *)[locations objectAtIndex: i]).horizontalAccuracy > 0)
         {
             newLocation = [locations objectAtIndex: i];

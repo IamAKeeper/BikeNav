@@ -17,4 +17,5 @@
 @property IBOutlet UISegmentedControl *segmentedControl;
 
 
+
 @end

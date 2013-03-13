@@ -16,7 +16,6 @@
 		D25E67FE16BB5CEF00100FEA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D25E67FD16BB5CEF00100FEA /* Default.png */; };
 		D25E680016BB5CEF00100FEA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D25E67FF16BB5CEF00100FEA /* Default@2x.png */; };
 		D25E680216BB5CEF00100FEA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D25E680116BB5CEF00100FEA /* Default-568h@2x.png */; };
-		D25E680516BB5CEF00100FEA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25E680316BB5CEF00100FEA /* MainStoryboard.storyboard */; };
 		D25E680816BB5CEF00100FEA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E680716BB5CEF00100FEA /* HomeViewController.m */; };
 		D25E680F16BB774900100FEA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25E680E16BB774900100FEA /* CFNetwork.framework */; };
 		D25E681116BB775C00100FEA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25E681016BB775C00100FEA /* CoreData.framework */; };
@@ -32,6 +31,8 @@
 		D29447A516CC50C60022D96A /* DistanceDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = D29447A416CC50C60022D96A /* DistanceDisplay.m */; };
 		D29447A816CC50D50022D96A /* SpeedDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = D29447A716CC50D50022D96A /* SpeedDisplay.m */; };
 		D29447AB16CC87B70022D96A /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29447AA16CC87B70022D96A /* TabBarController.m */; };
+		D2A37F3616F00F7C0094B808 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A37F3516F00F7C0094B808 /* HomeView.m */; };
+		D2A37F3916F026150094B808 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A37F3716F026150094B808 /* MainStoryboard.storyboard */; };
 		D2AA1F6A16DD9B82002B75D9 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AA1F6916DD9B82002B75D9 /* Route.m */; };
 		D2AA1F6D16DDA1D1002B75D9 /* RouteView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AA1F6C16DDA1D1002B75D9 /* RouteView.m */; };
 		D2F2B66516D4648600E9188F /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F2B66416D4648600E9188F /* GoogleMaps.framework */; };
@@ -64,7 +65,6 @@
 		D25E67FD16BB5CEF00100FEA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D25E67FF16BB5CEF00100FEA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D25E680116BB5CEF00100FEA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		D25E680416BB5CEF00100FEA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		D25E680616BB5CEF00100FEA /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		D25E680716BB5CEF00100FEA /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		D25E680E16BB774900100FEA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -91,6 +91,9 @@
 		D29447A716CC50D50022D96A /* SpeedDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedDisplay.m; sourceTree = "<group>"; };
 		D29447A916CC87B60022D96A /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		D29447AA16CC87B70022D96A /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		D2A37F3416F00F7C0094B808 /* HomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeView.h; sourceTree = "<group>"; };
+		D2A37F3516F00F7C0094B808 /* HomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeView.m; sourceTree = "<group>"; };
+		D2A37F3816F026150094B808 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		D2AA1F6816DD9B82002B75D9 /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
 		D2AA1F6916DD9B82002B75D9 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
 		D2AA1F6B16DDA1D1002B75D9 /* RouteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteView.h; sourceTree = "<group>"; };
@@ -189,9 +192,9 @@
 		D25E67F116BB5CEF00100FEA /* BikeNav */ = {
 			isa = PBXGroup;
 			children = (
+				D2A37F3716F026150094B808 /* MainStoryboard.storyboard */,
 				D25E67FA16BB5CEF00100FEA /* AppDelegate.h */,
 				D25E67FB16BB5CEF00100FEA /* AppDelegate.m */,
-				D25E680316BB5CEF00100FEA /* MainStoryboard.storyboard */,
 				D29447A916CC87B60022D96A /* TabBarController.h */,
 				D29447AA16CC87B70022D96A /* TabBarController.m */,
 				D25E680616BB5CEF00100FEA /* HomeViewController.h */,
@@ -220,6 +223,8 @@
 				D29447A416CC50C60022D96A /* DistanceDisplay.m */,
 				D29447A616CC50D50022D96A /* SpeedDisplay.h */,
 				D29447A716CC50D50022D96A /* SpeedDisplay.m */,
+				D2A37F3416F00F7C0094B808 /* HomeView.h */,
+				D2A37F3516F00F7C0094B808 /* HomeView.m */,
 				D25E67F216BB5CEF00100FEA /* Supporting Files */,
 			);
 			path = BikeNav;
@@ -295,8 +300,8 @@
 				D25E67FE16BB5CEF00100FEA /* Default.png in Resources */,
 				D25E680016BB5CEF00100FEA /* Default@2x.png in Resources */,
 				D25E680216BB5CEF00100FEA /* Default-568h@2x.png in Resources */,
-				D25E680516BB5CEF00100FEA /* MainStoryboard.storyboard in Resources */,
 				D2F2B66916D464EF00E9188F /* GoogleMaps.bundle in Resources */,
+				D2A37F3916F026150094B808 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 				D2F2B68016D5B4A100E9188F /* MapKitViewController.m in Sources */,
 				D2AA1F6A16DD9B82002B75D9 /* Route.m in Sources */,
 				D2AA1F6D16DDA1D1002B75D9 /* RouteView.m in Sources */,
+				D2A37F3616F00F7C0094B808 /* HomeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,10 +361,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		D25E680316BB5CEF00100FEA /* MainStoryboard.storyboard */ = {
+		D2A37F3716F026150094B808 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D25E680416BB5CEF00100FEA /* en */,
+				D2A37F3816F026150094B808 /* en */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";

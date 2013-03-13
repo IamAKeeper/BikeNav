@@ -42,7 +42,9 @@
     
     NSLog(@"Map viewdidload");
     
-    [self setUpLocationManager];
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
     mapView.delegate = self;
     [mapView setUserTrackingMode:MKUserTrackingModeFollow];
@@ -137,23 +139,27 @@
     [mapView setUserTrackingMode:MKUserTrackingModeFollow];
 }
 
-- (void) setUpLocationManager
+- (void) beginNewRide
 {
-    locationManager = [[CLLocationManager alloc] init];
-    locationManager.delegate = self;
     
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    if(!locationManager)
+    {
+        locationManager = [[CLLocationManager alloc] init];
+        locationManager.delegate = self;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    }
     
+    [self.mapView removeOverlays:mapView.overlays];
     pauseCount = 0;
     
     [locationManager startUpdatingLocation];
 }
 
-- (void) saveMapandClearOverlay
+- (void) endCurrentRide
 {
-    [mapView removeOverlays: mapView.overlays];
     
-    //for now, just clears overlays. this will save the map into the ride model eventually.
+    [locationManager stopUpdatingLocation];
+    //for now, just stops updating, will save map eventually
 }
 
 @end

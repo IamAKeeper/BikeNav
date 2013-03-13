@@ -7,15 +7,24 @@
 //
 
 #import "TimeDisplay.h"
+#import <CoreGraphics/CoreGraphics.h>
+
+#define kGradientTopColor            {105.0f/255.0f, 179.0f/255.0f, 216.0f/255.0f, 1.0f}
+#define kGradientBottomColor         {21.0f/255.0f, 92.0f/255.0f, 136.0f/255.0f, 1.0f}
+#define kGradientTopGloss            {255.0f/255.0f, 255.0f/255.0f, 255.0f/255.0f, 0.35f}
+#define kGradientBottomGloss         {255.0f/255.0f, 255.0f/255.0f, 255.0f/255.0f, 0.1f}
+
 
 @implementation TimeDisplay
 
-@synthesize timeData, displayState;
+@synthesize timeData, displayState, lightBlueColor, darkBlueColor;
 
-- (id)initWithFrame:(CGRect)frame
+- (id)init
 {
-    self = [super initWithFrame:frame];
-    if (self) {
+    
+    if (self = [super init]) {
+        self.backgroundColor = [UIColor clearColor];
+        self.opaque = NO;
         
     }
     return self;
@@ -61,10 +70,8 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGRect myRect = self.bounds;
     
-    //Background Setup
-    CGContextSetFillColorWithColor(context, [UIColor blueColor].CGColor);
-    CGContextFillRect(context, myRect);
-    CGContextSetStrokeColorWithColor(context, [UIColor orangeColor].CGColor);
+    //Background setup
+
     CGContextStrokeRectWithWidth(context, myRect, 6);
     
     //Text color setup
