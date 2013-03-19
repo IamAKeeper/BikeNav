@@ -70,8 +70,50 @@
     return YES;
 }
 
+- (BOOL) shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    NSLog(@"auth segue");
+    if([identifier isEqualToString:@"tabBarSegue"])
+    {
+        BOOL segueShouldOccur = YES; //default
+        
+        //Perform loading of user data via RESTKit
+        
+        
+        
+        
+        
+        
+        if(!segueShouldOccur)
+        {
+            UIAlertView *notPermitted = [[UIAlertView alloc]
+                                         initWithTitle:@"Alert"
+                                         message:@"Incorrect Username/Password"
+                                         delegate:nil
+                                         cancelButtonTitle:@"OK"
+                                         otherButtonTitles:nil];
+            
+            // shows alert to user
+            [notPermitted show];
+            
+            // prevent segue from occurring
+            return NO;
+        }
+        
+        
+    }
+    
+    
+    //Default return - allow segue
+    return  YES;
+    
+    
+    
+}
+
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
+    NSLog(@"prepare segue");
     NSString * segueIdentifier = [segue identifier];
     if([segueIdentifier isEqualToString:@"tabBarSegue"]){
         
