@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8DDA59CD63A64CC295BDD6A8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B56F9AAE644DC1963D61B1 /* libPods.a */; };
 		D25E67EC16BB5CEF00100FEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25E67EB16BB5CEF00100FEA /* UIKit.framework */; };
 		D25E67EE16BB5CEF00100FEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25E67ED16BB5CEF00100FEA /* Foundation.framework */; };
 		D25E67F016BB5CEF00100FEA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25E67EF16BB5CEF00100FEA /* CoreGraphics.framework */; };
@@ -53,8 +52,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03B56F9AAE644DC1963D61B1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6B70F8864A34379BD9F6A91 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		D25E67E716BB5CEF00100FEA /* BikeNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25E67EB16BB5CEF00100FEA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D25E67ED16BB5CEF00100FEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -142,7 +139,6 @@
 				D25E67EE16BB5CEF00100FEA /* Foundation.framework in Frameworks */,
 				D25E67F016BB5CEF00100FEA /* CoreGraphics.framework in Frameworks */,
 				D2F2B66516D4648600E9188F /* GoogleMaps.framework in Frameworks */,
-				8DDA59CD63A64CC295BDD6A8 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +151,6 @@
 				D25E67F116BB5CEF00100FEA /* BikeNav */,
 				D25E67EA16BB5CEF00100FEA /* Frameworks */,
 				D25E67E816BB5CEF00100FEA /* Products */,
-				C6B70F8864A34379BD9F6A91 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,7 +185,6 @@
 				D25E67EB16BB5CEF00100FEA /* UIKit.framework */,
 				D25E67ED16BB5CEF00100FEA /* Foundation.framework */,
 				D25E67EF16BB5CEF00100FEA /* CoreGraphics.framework */,
-				03B56F9AAE644DC1963D61B1 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -261,7 +255,6 @@
 				D25E67E416BB5CEF00100FEA /* Frameworks */,
 				D25E67E516BB5CEF00100FEA /* Resources */,
 				EA7360B2281A43FE9A265EDB /* Copy Pods Resources */,
-				E5FA40F5563C4A5ABAB4DC2C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -315,20 +308,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		E5FA40F5563C4A5ABAB4DC2C /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-		};
 		EA7360B2281A43FE9A265EDB /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -415,14 +394,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(BUILT_PRODUCTS_DIR)/**",
-					"$(inherited)",
-				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				VALID_ARCHS = armv7s;
 			};
 			name = Debug;
 		};
@@ -441,22 +415,15 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(BUILT_PRODUCTS_DIR)/**",
-					"$(inherited)",
-				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = armv7s;
 			};
 			name = Release;
 		};
 		D25E680C16BB5CEF00100FEA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6B70F8864A34379BD9F6A91 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = armv7;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -465,7 +432,6 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BikeNav/BikeNav-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				INFOPLIST_FILE = "BikeNav/BikeNav-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -475,7 +441,6 @@
 		};
 		D25E680D16BB5CEF00100FEA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6B70F8864A34379BD9F6A91 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = armv7;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -484,7 +449,6 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BikeNav/BikeNav-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				INFOPLIST_FILE = "BikeNav/BikeNav-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
