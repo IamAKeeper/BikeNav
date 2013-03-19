@@ -12,7 +12,7 @@
 #define kGradientTopColor            {105.0f/255.0f, 179.0f/255.0f, 216.0f/255.0f, 1.0f}
 #define kGradientBottomColor         {21.0f/255.0f, 92.0f/255.0f, 136.0f/255.0f, 1.0f}
 #define kGradientTopGloss            {255.0f/255.0f, 255.0f/255.0f, 255.0f/255.0f, 0.35f}
-#define kGradientBottomGloss         {255.0f/255.0f, 255.0f/255.0f, 255.0f/255.0f, 0.1f}
+#define kGradientBottomGloss         {255.0f/255.0f, 255.0f/255.0f, 255.0f/255.0f, 0.05f}
 
 @implementation HomeView
 
@@ -31,6 +31,8 @@
 
 void drawLinearGradient(CGContextRef context, CGRect rect, CGColorSpaceRef space, CGColorRef startColor, CGColorRef endColor)
 {
+    
+    CGContextClipToRect(context, rect);
     
     CGFloat colorLocations[] = { 0.0f, 1.0f };
     
@@ -52,6 +54,7 @@ void drawLinearGradient(CGContextRef context, CGRect rect, CGColorSpaceRef space
 }
 void drawGlossAndGradient(CGContextRef context, CGRect rect)
 {
+    CGContextSaveGState(context);
     
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     
@@ -61,7 +64,7 @@ void drawGlossAndGradient(CGContextRef context, CGRect rect)
     CGColorRef bottomColor = CGColorCreate(colorSpace, bottomColorComponents);
     
     CGContextSetStrokeColorWithColor(context, bottomColor);
-    CGContextStrokeRect(context, rect);
+    CGContextStrokeRectWithWidth(context, rect, 5);
     
     drawLinearGradient(context, rect, colorSpace, topColor, bottomColor);
     
@@ -75,6 +78,9 @@ void drawGlossAndGradient(CGContextRef context, CGRect rect)
     
     drawLinearGradient(context, topHalf, colorSpace, topGloss, bottomGloss);
     
+    CGContextClip(context);
+    
+    CGContextRestoreGState(context);
     CGColorSpaceRelease(colorSpace);
     
 }
@@ -85,10 +91,17 @@ void drawGlossAndGradient(CGContextRef context, CGRect rect)
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGRect myRect = self.bounds;
     
+    CGContextSetFillColorWithColor(context, [UIColor lightGrayColor].CGColor);
+    CGContextFillRect(context, myRect);
     //Background setup
-    drawGlossAndGradient(context, myRect);
-    CGContextStrokeRectWithWidth(context, myRect, 6);
     
+    //Display gradients
+    
+    drawGlossAndGradient(context, dDisplay.frame);
+    
+    drawGlossAndGradient(context, tDisplay.frame);
+    
+    drawGlossAndGradient(context, sDisplay.frame);
 }
 
 

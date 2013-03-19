@@ -33,7 +33,7 @@
     {
         
         CGContextAddPath(context, path);
-        CGContextSetRGBStrokeColor(context, 0.0f, 0.0f, 1.0f, 0.5f);
+        CGContextSetRGBStrokeColor(context, 105.0f/255.0f, 179.0f/255.0f, 216.0f/255.0f, 0.5f);
         CGContextSetLineJoin(context, kCGLineJoinRound);
         CGContextSetLineCap(context, kCGLineJoinRound);
         CGContextSetLineWidth(context, lineWidth);

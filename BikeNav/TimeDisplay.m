@@ -38,11 +38,12 @@
     
     CGContextSelectFont (myContext,
                          "Helvetica-Bold",
-                         h/2.5,
+                         h/2.75,
                          kCGEncodingMacRoman);
     CGContextSetCharacterSpacing (myContext, 3);
     
-    CGContextShowTextAtPoint (myContext, 20, h/2 + 10, timeText, strlen(timeText));
+    CGContextShowTextAtPoint (myContext, 15 , h/2 + 15, timeText, strlen(timeText));
+    
     
 }
 
@@ -58,6 +59,12 @@
 
 - (char *)formattedTimeDuration
 {
+    if(timeData == 0)
+    {
+        char *defaultTime = "00:00:00.0";
+        return defaultTime;
+    }
+        
     double duration = timeData*-1;
     NSInteger hours = floor(duration/3200);
     NSInteger minutes = floor(duration/60);
@@ -69,10 +76,6 @@
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGRect myRect = self.bounds;
-    
-    //Background setup
-
-    CGContextStrokeRectWithWidth(context, myRect, 6);
     
     //Text color setup
     CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);

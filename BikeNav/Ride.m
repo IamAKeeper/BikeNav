@@ -118,7 +118,7 @@
     }
     
     currentSpeed = distance/time*(M_S_TO_MI_HR);
-    averageSpeed = distanceCovered / -1*[self updateTimeElapsed];
+    averageSpeed = (distanceCovered / -1*[self updateTimeElapsed])*(M_S_TO_MI_HR);
     
 }
 

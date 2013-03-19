@@ -27,18 +27,17 @@
     return self;
 }
 
-/*
+
 - (void) viewWillAppear:(BOOL)animated{
     
     
-    
-    
 }
-*/
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     
     NSLog(@"Map viewdidload");
     
@@ -46,8 +45,11 @@
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
+    firstUpdate = YES;
+    
     mapView.delegate = self;
     [mapView setUserTrackingMode:MKUserTrackingModeFollow];
+    
     
 	// Do any additional setup after loading the view.
 }
@@ -61,16 +63,18 @@
 - (void) mapView:(MKMapView *)aMapView didUpdateUserLocation:(MKUserLocation *)aUserLocation
 {
 
-   /*
-    CLLocationCoordinate2D currentLocation = [aMapView.userLocation.location coordinate];
+    if (firstUpdate == YES)
+    {
+        CLLocationCoordinate2D currentLocation = [aMapView.userLocation.location coordinate];
     
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(currentLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
+        MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(currentLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
+
     
-    MKMapRect viewRect = [self mapRectForCoordinateRegion:viewRegion];
-    
-    [aMapView setCenterCoordinate:currentLocation];
-    [aMapView setRegion:viewRegion animated:NO];
-   */ 
+        [aMapView setCenterCoordinate:currentLocation];
+        [aMapView setRegion:viewRegion animated:NO];
+        
+        firstUpdate = NO;
+    }
     
 }
 

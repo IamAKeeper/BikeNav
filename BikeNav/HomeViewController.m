@@ -23,6 +23,8 @@
 {
     [super viewDidLoad];
     
+    [self.navigationItem setHidesBackButton:YES];
+    
     [currentRide pauseRideUpdates];
     
     NSLog(@"ViewDidLoad");

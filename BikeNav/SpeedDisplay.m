@@ -16,7 +16,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
     }
     return self;
 }
@@ -32,11 +31,19 @@
     
     CGContextSelectFont (myContext,
                          "Helvetica-Bold",
-                         h/3,
+                         h/2,
                          kCGEncodingMacRoman);
     CGContextSetCharacterSpacing (myContext, 3);
     
-    CGContextShowTextAtPoint (myContext, w/7, h/1.75, data, strlen(data));
+    CGContextShowTextAtPoint (myContext, 15, h/2 + 20, data, strlen(data));
+    
+    char *units = "mi / hr";
+    CGContextSelectFont (myContext,
+                         "Helvetica-Bold",
+                         h/5,
+                         kCGEncodingMacRoman);
+    
+    CGContextShowTextAtPoint (myContext, 180, h/2 + 20, units, strlen(units));
     
 }
 
@@ -45,12 +52,6 @@
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGRect myRect = self.bounds;
-    
-    //Background Setup
-    CGContextSetFillColorWithColor(context, [UIColor blueColor].CGColor);
-    CGContextFillRect(context, myRect);
-    CGContextSetStrokeColorWithColor(context, [UIColor orangeColor].CGColor);
-    CGContextStrokeRectWithWidth(context, myRect, 6);
     
     //Text color setup
     CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);

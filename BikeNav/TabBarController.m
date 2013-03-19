@@ -29,14 +29,17 @@
 - (void) viewWillAppear:(BOOL)animated{
     
     //Tab Bar customizing!
+    /*
     [self.tabBar setTintColor: [UIColor colorWithRed:244/255.0f green:133/255.0f blue:50/255.0f alpha:1.0f]];
     [self.tabBar setSelectedImageTintColor: [UIColor colorWithRed:49/255.0f green:187/255.0f blue:245/255.0f alpha:1.0f]];
+     */
 }
      
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    self.navigationItem.hidesBackButton = YES;
 	/* Create the segmented control
     NSArray *buttonNames = [NSArray arrayWithObjects:
                             @"Start", nil];

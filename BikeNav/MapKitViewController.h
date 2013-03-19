@@ -12,7 +12,9 @@
 #import "RouteView.h"
 
 @interface MapKitViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
-
+{
+    BOOL firstUpdate;
+}
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) IBOutlet UIButton *followButton;
 
