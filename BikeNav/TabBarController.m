@@ -78,7 +78,6 @@
 {
     
     HomeViewController *homeVC = (HomeViewController *)[[self viewControllers] objectAtIndex:0];
-    NSLog(@"Hey");
     MapKitViewController *mapVC = (MapKitViewController *)[[self viewControllers] objectAtIndex:1];
     
     
@@ -87,7 +86,7 @@
     {
         if(segController.numberOfSegments == 2)
         {
-            NSLog(@"buttons animated");
+            
             [segController insertSegmentWithTitle:@"Pause" atIndex:1 animated:YES];
             [segController setTitle:@"Continue" forSegmentAtIndex:0];
             

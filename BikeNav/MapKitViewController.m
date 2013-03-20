@@ -34,16 +34,11 @@
 }
 
 
-- (void)viewDidLoad
+
+
+- (void)loadView
 {
-    [super viewDidLoad];
-    
-    
-    NSLog(@"Map viewdidload");
-    
-    locationManager = [[CLLocationManager alloc] init];
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [super loadView];
     
     firstUpdate = YES;
     
@@ -155,6 +150,12 @@
     
     [self.mapView removeOverlays:mapView.overlays];
     pauseCount = 0;
+    
+    if(!self.mapView)
+    {
+        NSLog(@"loaded mapview!");
+        [self loadView];
+    }
     
     [locationManager startUpdatingLocation];
 }

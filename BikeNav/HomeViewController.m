@@ -27,7 +27,7 @@
     
     [currentRide pauseRideUpdates];
     
-    NSLog(@"ViewDidLoad");
+
     
     NSTimer *timerTwo = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateTimeWithTimer:) userInfo:nil repeats:YES];
     
@@ -39,7 +39,6 @@
     locationManager.distanceFilter = 1;
     locationManager.activityType = CLActivityTypeFitness;
     locationManager.pausesLocationUpdatesAutomatically = YES;
-    [locationManager startUpdatingLocation];
     lastLocation = nil;
     
 	// Do any additional setup after loading the view, typically from a nib.4
@@ -54,11 +53,12 @@
 - (void) beginNewRide
 {
     currentRide = [[Ride alloc] init];
+    [locationManager startUpdatingLocation];
 }
 
 -(void) endCurrentRide
 {
-    NSLog(@"ended");
+
     //This space reserved for saving ride information to backend
     
 }
@@ -80,7 +80,7 @@
     
     for( i = [locations count] - 1; i >= 0; i--)
     {
-        NSLog(@"%d", [locations count]);
+
         if(((CLLocation *)[locations objectAtIndex: i]).horizontalAccuracy > 0)
         {
             newLocation = [locations objectAtIndex: i];

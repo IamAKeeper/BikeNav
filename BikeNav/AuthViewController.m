@@ -70,6 +70,27 @@
     return YES;
 }
 
+- (BOOL) shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    
+    if([identifier isEqualToString:@"tabBarSegue"])
+    {
+        BOOL performSegue = YES;
+        
+        //Load data and check if valid
+        
+        if(!performSegue)
+        {
+            //error message
+            
+            return NO;
+        }
+    }
+    
+    return YES;
+    
+}
+
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     NSString * segueIdentifier = [segue identifier];
